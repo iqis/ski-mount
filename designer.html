@@ -11,6 +11,10 @@
 <meta property="og:title" content="Ski Mount Hole Designer">
 <meta property="og:description" content="Lay several bindings out on one ski, find shared inserts and tight spacing, and print a 1:1 mounting template.">
 <meta property="og:url" content="https://iqis.github.io/ski-mount/designer.html">
+<meta property="og:image" content="https://iqis.github.io/ski-mount/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2315201B'/%3E%3Cg fill='none' stroke='%23ECEFED' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='3.5'/%3E%3Ccircle cx='21' cy='21' r='3.5'/%3E%3C/g%3E%3Cpath d='M6 26h20' stroke='%23BA4A19' stroke-width='2'/%3E%3C/svg%3E">
 <style>
   html { color-scheme: light dark; }
@@ -96,6 +100,10 @@
 
   /* summary + drawing */
   .board { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px 12px; display: grid; gap: 12px; min-width: 0; }
+  @media (min-width: 960px) and (min-height: 760px) {
+    .board { position: sticky; top: calc(var(--site-nav-h, 0px) + 10px); z-index: 6;
+      box-shadow: 0 10px 24px -20px color-mix(in srgb, var(--ink) 60%, transparent); }
+  }
   .stats { display: flex; flex-wrap: wrap; gap: 8px 34px; align-items: baseline; }
   .stat { display: grid; gap: 0; }
   .stat .v { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 22px; line-height: 1.2; display: flex; align-items: baseline; gap: 6px; }
@@ -116,11 +124,11 @@
 
   /* setups */
   .setups { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; align-items: start; }
-  .setup { background: var(--paper); border: 1px solid var(--rule); border-top: 4px solid var(--c); border-radius: 10px; padding: 14px 16px 12px; display: grid; gap: 12px; min-width: 0; }
+  .setup { background: var(--paper); border: 1px solid var(--rule); border-top: 4px solid var(--c); border-radius: 10px; padding: 14px 16px 12px; display: grid; gap: 10px; min-width: 0; }
   .setup-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; align-items: start; }
   .setup-head h3 { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.25; }
   .setup-head .sub { grid-column: 1 / 2; font-size: 13px; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
-  .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+  .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 12px; }
   .field { display: grid; gap: 4px; min-width: 0; align-content: start; }
   .field input[type="text"] { width: 100%; }
   .nudge { display: grid; grid-template-columns: 30px minmax(0, 1fr) 30px; gap: 4px; }
@@ -135,7 +143,8 @@
   .chips { display: flex; flex-wrap: wrap; gap: 5px; }
   .chips button { font-family: var(--mono); font-size: 12.5px; padding: 3px 10px; border-radius: 999px; cursor: pointer; border: 1px solid var(--rule); background: transparent; color: var(--ink-2); }
   .chips button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-  .parts { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .parts { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+  .parts .label { margin-right: -4px; }
   .check { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--ink-2); cursor: pointer; }
   .check input { width: 16px; height: 16px; accent-color: var(--ink); }
   .more { display: grid; gap: 8px; margin-top: 8px; }
@@ -680,7 +689,7 @@
     const shapeOn = e.parts.some((p, i) => p.shapeOnly && s.parts[i]);
     const title = e.brand === 'Custom' ? e.name : e.short;
     const partsHTML = s.lib !== 'custom' && e.parts.length > 1
-      ? `<div class="parts">${e.parts.map((p, i) => `<label class="check"><input type="checkbox" data-f="part" data-i="${i}"${s.parts[i] ? ' checked' : ''}> ${esc(p.part)}</label>`).join('')}</div>` : '';
+      ? `<div class="parts"><span class="label">Drill</span>${e.parts.map((p, i) => `<label class="check"><input type="checkbox" data-f="part" data-i="${i}"${s.parts[i] ? ' checked' : ''}> ${esc(p.part)}</label>`).join('')}</div>` : '';
     const custom = s.lib === 'custom' ? `
         <div class="row">
           <input type="text" data-f="cname" value="${esc(s.name)}" aria-label="Pattern name" maxlength="40" style="flex:1 1 8em">
