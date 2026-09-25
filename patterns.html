@@ -65,7 +65,7 @@
   #q:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
   .count { font-family: var(--mono); font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
-  .pat { background: var(--paper); border: 1px solid var(--rule); border-radius: 11px; padding: 16px 18px; display: grid; gap: 10px; scroll-margin-top: 96px; }
+  .pat { background: var(--paper); border: 1px solid var(--rule); border-radius: 11px; padding: 16px 18px; display: grid; gap: 10px; scroll-margin-top: 148px; }
   .pat:target { outline: 2px solid var(--mark); outline-offset: 3px; }
   .pat h2 .anchor { text-decoration: none; }
   .pat h2 .anchor:hover::after { content: " #"; color: var(--ink-3); font-weight: 400; }
@@ -116,8 +116,14 @@
   details { font-size: 13px; }
   summary { cursor: pointer; color: var(--ink-2); }
   details pre { font-family: var(--mono); font-size: 12px; background: var(--mat); border-radius: 8px; padding: 10px 12px; overflow-x: auto; margin: 8px 0 0; color: var(--ink-2); }
-  .src { font-size: 12.5px; color: var(--ink-3); }
-  .src a { color: var(--ink-3); }
+  .sources { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
+  .sources .label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-right: 2px; }
+  .src-link { display: inline-flex; align-items: baseline; gap: 6px; font-size: 12.5px; text-decoration: none;
+    border: 1px solid var(--rule); border-radius: 999px; padding: 3px 10px; color: var(--ink-2); background: var(--ground); }
+  .src-link:hover { border-color: var(--mark); color: var(--ink); }
+  .src-link:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
+  .src-link .src-host { font-family: var(--mono); font-size: 11px; color: var(--ink-3); white-space: nowrap; }
+  .src-link.plain { border-style: dashed; color: var(--ink-3); }
   .group-head { margin: 18px 0 -2px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; gap: 10px; }
   .group-head::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
@@ -190,7 +196,10 @@
         <a class="btn" href="designer.html#add=22d-vice">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="22d-vice">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.twentytwodesigns.com/pages/printable-template-info" rel="noopener nofollow">22 Designs paper template</a>, <a href="https://earnyourturns.com/wp-content/uploads/2019/08/22D_Outlaw.pdf" rel="noopener nofollow">EarnYourTurns template: 22D 6-hole (HH, Vice, Outlaw, Lynx)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.twentytwodesigns.com/pages/printable-template-info" target="_blank" rel="noopener"><span class="src-name">22 Designs paper template</span><span class="src-host">twentytwodesigns.com &#8599;</span></a><a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/22D_Outlaw.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: 22D 6-hole (HH, Vice, Outlaw, Lynx)</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -225,7 +234,10 @@ heel climber — from the back of boot heel
         <a class="btn" href="designer.html#add=22d-axl">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="22d-axl">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.twentytwodesigns.com/pages/printable-template-info" rel="noopener nofollow">22 Designs paper template</a>, <a href="https://cdn.shopify.com/s/files/1/0901/4201/5795/files/22_D_Axl_Poster_2025_26_9.15.pdf" rel="noopener nofollow">22 Designs Axl instruction poster 2025/26</a>, <a href="https://earnyourturns.com/wp-content/uploads/2019/08/22D-AXL.pdf" rel="noopener nofollow">EarnYourTurns template: 22D Axl</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.twentytwodesigns.com/pages/printable-template-info" target="_blank" rel="noopener"><span class="src-name">22 Designs paper template</span><span class="src-host">twentytwodesigns.com &#8599;</span></a><a class="src-link" href="https://cdn.shopify.com/s/files/1/0901/4201/5795/files/22_D_Axl_Poster_2025_26_9.15.pdf" target="_blank" rel="noopener"><span class="src-name">22 Designs Axl instruction poster 2025/26</span><span class="src-host">cdn.shopify.com &#8599;</span></a><a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/22D-AXL.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: 22D Axl</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -261,7 +273,10 @@ heel bracket — from the 3-pin line
         <a class="btn" href="designer.html#add=bishop-bmf-75">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="bishop-bmf-75">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://cdn.shopify.com/s/files/1/0995/8900/files/1228_REV_C_BMF_MOUNTING_TEMPLATE_Legal.pdf" rel="noopener nofollow">Bishop BMF mounting template (1228 rev C)</a>, <a href="https://earnyourturns.com/wp-content/uploads/2021/08/Bishop-BMF_22D-6-hole-axl_comparo.pdf" rel="noopener nofollow">EarnYourTurns template: Bishop BMF vs 22D Axl</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://cdn.shopify.com/s/files/1/0995/8900/files/1228_REV_C_BMF_MOUNTING_TEMPLATE_Legal.pdf" target="_blank" rel="noopener"><span class="src-name">Bishop BMF mounting template (1228 rev C)</span><span class="src-host">cdn.shopify.com &#8599;</span></a><a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2021/08/Bishop-BMF_22D-6-hole-axl_comparo.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Bishop BMF vs 22D Axl</span><span class="src-host">earnyourturns.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -289,7 +304,10 @@ heel bracket — from the 3-pin line
         <a class="btn" href="designer.html#add=voile-3">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="voile-3">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.voile.com/voile_3_hole_mounting_template.pdf" rel="noopener nofollow">Voilé 3-hole template</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.voile.com/voile_3_hole_mounting_template.pdf" target="_blank" rel="noopener"><span class="src-name">Voilé 3-hole template</span><span class="src-host">voile.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -322,7 +340,10 @@ heel pad — from the back of boot heel
         <a class="btn" href="designer.html#add=voile-4">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="voile-4">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.voile.com/voile_4_hole_mounting_template.pdf" rel="noopener nofollow">Voilé 4-hole template</a>, <a href="https://earnyourturns.com/wp-content/uploads/2019/08/G3-4-hole-targa_mounting-template.pdf" rel="noopener nofollow">EarnYourTurns template: G3 Targa 4-hole</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.voile.com/voile_4_hole_mounting_template.pdf" target="_blank" rel="noopener"><span class="src-name">Voilé 4-hole template</span><span class="src-host">voile.com &#8599;</span></a><a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/G3-4-hole-targa_mounting-template.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: G3 Targa 4-hole</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -353,7 +374,10 @@ heel pad — from the back of boot heel
         <a class="btn" href="designer.html#add=voile-6">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="voile-6">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://earnyourturns.com/wp-content/uploads/2021/08/voile-4+2-pattern.pdf" rel="noopener nofollow">EarnYourTurns template: Voilé 6-hole</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2021/08/voile-4+2-pattern.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Voilé 6-hole</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -390,7 +414,10 @@ heel bracket — from the boot toe
         <a class="btn" href="designer.html#add=bishop-bmf-ntn">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="bishop-bmf-ntn">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://cdn.shopify.com/s/files/1/0995/8900/files/1228_REV_C_BMF_MOUNTING_TEMPLATE_Legal.pdf" rel="noopener nofollow">Bishop BMF mounting template (1228 rev C)</a>, <a href="https://earnyourturns.com/wp-content/uploads/2021/08/Bishop-BMF_22D-6-hole-axl_comparo.pdf" rel="noopener nofollow">EarnYourTurns template: Bishop BMF vs 22D Axl</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://cdn.shopify.com/s/files/1/0995/8900/files/1228_REV_C_BMF_MOUNTING_TEMPLATE_Legal.pdf" target="_blank" rel="noopener"><span class="src-name">Bishop BMF mounting template (1228 rev C)</span><span class="src-host">cdn.shopify.com &#8599;</span></a><a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2021/08/Bishop-BMF_22D-6-hole-axl_comparo.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Bishop BMF vs 22D Axl</span><span class="src-host">earnyourturns.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -431,7 +458,10 @@ heel, large — from the boot toe
         <a class="btn" href="designer.html#add=meidjo-20">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="meidjo-20">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://earnyourturns.com/wp-content/uploads/2019/08/meidjo-20.pdf" rel="noopener nofollow">EarnYourTurns template: Meidjo v2.x</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/meidjo-20.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Meidjo v2.x</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -472,7 +502,10 @@ heel, large — from the boot toe
         <a class="btn" href="designer.html#add=meidjo-21l">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="meidjo-21l">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://earnyourturns.com/wp-content/uploads/2019/08/meidjo-21.pdf" rel="noopener nofollow">EarnYourTurns template: Meidjo v2.1 Large</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/meidjo-21.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Meidjo v2.1 Large</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -513,7 +546,10 @@ pivots, alt — from the boot toe
         <a class="btn" href="designer.html#add=omg-tts">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="omg-tts">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://earnyourturns.com/wp-content/uploads/2019/08/OMG-TTS_template.pdf" rel="noopener nofollow">EarnYourTurns template: OMG TTS</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/OMG-TTS_template.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: OMG TTS</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -552,7 +588,10 @@ rear, large — from the boot toe
         <a class="btn" href="designer.html#add=rotte-freedom">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="rotte-freedom">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://earnyourturns.com/wp-content/uploads/2019/08/Rotte-FreeDOM_template.pdf" rel="noopener nofollow">EarnYourTurns template: Rottefella Freedom</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/Rotte-FreeDOM_template.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Rottefella Freedom</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -583,7 +622,10 @@ rear, large — from the boot toe
         <a class="btn" href="designer.html#add=rotte-freeride">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="rotte-freeride">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://earnyourturns.com/wp-content/uploads/2019/08/Rotte-FreeRide-12_template.pdf" rel="noopener nofollow">EarnYourTurns template: Rottefella FreeRide &gt;2012</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/Rotte-FreeRide-12_template.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: Rottefella FreeRide &gt;2012</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -619,7 +661,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-c-raider">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-c-raider">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -654,7 +699,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-crest--2023">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-crest--2023">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -689,7 +737,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-crest--2024">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-crest--2024">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -724,7 +775,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-freeraider--2020">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-freeraider--2020">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -759,7 +813,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-freeraider--2021">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-freeraider--2021">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -794,7 +851,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-haute-route">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-haute-route">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -829,7 +889,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-haute-route-plus--2024">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-haute-route-plus--2024">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -864,7 +927,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-hy">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-hy">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -899,7 +965,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-kuluar---rt">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-kuluar---rt">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -934,7 +1003,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-kuluar-superlite">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-kuluar-superlite">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -969,7 +1041,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-r12--2019">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-r12--2019">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1004,7 +1079,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-rt-11-evo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-rt-11-evo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1039,7 +1117,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-rt-8-10-evo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-rt-8-10-evo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1074,7 +1155,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-raider-12--2020">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-raider-12--2020">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1109,7 +1193,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-raider-12--2021">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-raider-12--2021">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1144,7 +1231,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-raider-sl">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-raider-sl">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1179,7 +1269,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-revolution---sl---trofeo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-revolution---sl---trofeo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1214,7 +1307,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk-v-crest">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk-v-crest">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1249,7 +1345,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-atk--free-raider-evo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-atk--free-raider-evo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1284,7 +1383,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-bd-helio-110---145---200lt">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-bd-helio-110---145---200lt">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1319,7 +1421,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-bd-helio-180---200">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-bd-helio-180---200">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1354,7 +1459,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dps-l10">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dps-l10">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1389,7 +1497,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dps-r10---h10">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dps-r10---h10">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1424,7 +1535,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dps-r14">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dps-r14">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1459,7 +1573,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-beast14">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-beast14">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1496,7 +1613,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-beast16">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-beast16">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1531,7 +1651,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-blacklight-2-0---pro">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-blacklight-2-0---pro">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1566,7 +1689,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-dna---mezzalama">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-dna---mezzalama">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1601,7 +1727,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-expedition">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-expedition">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1636,7 +1765,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-ltr-2-0---pdg">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-ltr-2-0---pdg">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1671,7 +1803,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-low-tech-race">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-low-tech-race">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1706,7 +1841,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-radical">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-radical">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1741,7 +1879,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-radical2">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-radical2">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1776,7 +1917,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-ridge">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-ridge">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1811,7 +1955,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-rotation7">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-rotation7">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a>, <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a><a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1846,7 +1993,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-seven-summits">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-seven-summits">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1881,7 +2031,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-speed---speedfit">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-speed---speedfit">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1916,7 +2069,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-speed-superlite">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-speed-superlite">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1951,7 +2107,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-dynafit-speed-turn-2-0">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-dynafit-speed-turn-2-0">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -1986,7 +2145,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-superlite">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-superlite">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2022,7 +2184,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=dynafit-vertical">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="dynafit-vertical">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2057,7 +2222,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=fritschi-vipec">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="fritschi-vipec">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2092,7 +2260,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=fritschi-xenic">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="fritschi-xenic">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2127,7 +2298,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=g3-ion">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="g3-ion">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2162,7 +2336,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-hagan-boost">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-hagan-boost">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2197,7 +2374,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-hagan-core">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-hagan-core">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2232,7 +2412,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-hagan-core-pro---evo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-hagan-core-pro---evo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2267,7 +2450,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-hagan-pure---pin-up">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-hagan-pure---pin-up">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2302,7 +2488,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-hagan-ride">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-hagan-ride">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2337,7 +2526,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-hagan-ultra---zr">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-hagan-ultra---zr">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2372,7 +2564,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-kreuzspitze-el">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-kreuzspitze-el">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2407,7 +2602,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-kreuzspitze-sctt-gt-rs">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-kreuzspitze-sctt-gt-rs">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2442,7 +2640,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-la-sportiva-rsr">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-la-sportiva-rsr">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2477,7 +2678,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-marker-alpinist">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-marker-alpinist">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2512,7 +2716,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-marker-cruise">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-marker-cruise">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2548,7 +2755,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=marker-kingpin">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-kingpin">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2583,7 +2793,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-caribou">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-caribou">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2618,7 +2831,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-guide">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-guide">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2653,7 +2869,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-race-adjustable--165-170">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-race-adjustable--165-170">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2688,7 +2907,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-s170---oazo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-s170---oazo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2723,7 +2945,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-serak---pika---wepa">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-serak---pika---wepa">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2758,7 +2983,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-summit---karibou">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-summit---karibou">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2793,7 +3021,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-plum-yak">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-plum-yak">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2828,7 +3059,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-rc1-by-pg">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-rc1-by-pg">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2863,7 +3097,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=salomon-mtn">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-mtn">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://www.slidewright.com/Bindings/Templates/Salomon_Mtn_Pure_Template.pdf" rel="noopener nofollow">SlideWright template: Salomon_Mtn_Pure_Template.pdf</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Salomon_Mtn_Pure_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Salomon_Mtn_Pure_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2898,7 +3135,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-ski-trab-tr---titan-adjustable">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-ski-trab-tr---titan-adjustable">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2933,7 +3173,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-ski-trab-tr-race---titan---vario-1">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-ski-trab-tr-race---titan---vario-1">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -2969,7 +3212,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-ski-trab-tr-1">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-ski-trab-tr-1">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3005,7 +3251,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-ski-trab-tr-2">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-ski-trab-tr-2">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3040,7 +3289,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-ski-trab-titan-vario-adjustable">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-ski-trab-titan-vario-adjustable">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3075,7 +3327,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-ski-trab-vario-adj----vario-2">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-ski-trab-vario-adj----vario-2">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3110,7 +3365,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=skimo-slatnar-st-touring">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="skimo-slatnar-st-touring">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3146,7 +3404,10 @@ rear plate — from the boot toe
         <a class="btn" href="designer.html#add=marker-duke-epf">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-duke-epf">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3181,7 +3442,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=marker-duke-pt">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-duke-pt">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3216,7 +3480,10 @@ rear plate — from the boot toe
         <a class="btn" href="designer.html#add=marker-duke">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-duke">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3253,7 +3520,10 @@ rear plate — from the boot toe
         <a class="btn" href="designer.html#add=salomon-guardian">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-guardian">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3289,7 +3559,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=salomon-shift">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-shift">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a>, <a href="https://www.slidewright.com/Bindings/Templates/Salomon_Shift_MNC_10-13_Template.pdf" rel="noopener nofollow">SlideWright template: Salomon_Shift_MNC_10-13_Template.pdf</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a><a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Salomon_Shift_MNC_10-13_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Salomon_Shift_MNC_10-13_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3324,7 +3597,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-almonte">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-almonte">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Amonte_PT_Tour_Template.pdf" rel="noopener nofollow">SlideWright template: Tyrolia_Amonte_PT_Tour_Template.pdf</a>, <a href="https://skimo.co/tech-binding-hole-patterns" rel="noopener nofollow">skimo.co hole pattern table</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Amonte_PT_Tour_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Tyrolia_Amonte_PT_Tour_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://skimo.co/tech-binding-hole-patterns" target="_blank" rel="noopener"><span class="src-name">skimo.co hole pattern table</span><span class="src-host">skimo.co &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3359,7 +3635,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-tour-demo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-tour-demo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Tour_Demo_Template.pdf" rel="noopener nofollow">SlideWright template: Tyrolia_Tour_Demo_Template.pdf</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Tour_Demo_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Tyrolia_Tour_Demo_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3395,7 +3674,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=look-racing">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="look-racing">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3430,7 +3712,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=look-px">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="look-px">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3465,7 +3750,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=look-pivot">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="look-pivot">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a>, <a href="http://www.slidewright.com/Bindings/Look/Binding%20templates-Pivot-FKS-1pg.pdf" rel="noopener nofollow">SlideWright Pivot/FKS 2012</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a><a class="src-link" href="http://www.slidewright.com/Bindings/Look/Binding%20templates-Pivot-FKS-1pg.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright Pivot/FKS 2012</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3500,7 +3788,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=look-pivot-old">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="look-pivot-old">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3535,7 +3826,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=marker-jester">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-jester">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3570,7 +3864,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=marker-ten">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-ten">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3606,7 +3903,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=salomon-sth">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-sth">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3641,7 +3941,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=salomon-sth2">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-sth2">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3676,7 +3979,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=salomon-warden11">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-warden11">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://www.slidewright.com/Bindings/Templates/Salomon_Stage_Strive_Template.pdf" rel="noopener nofollow">SlideWright template: Salomon_Stage_Strive_Template.pdf</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Salomon_Stage_Strive_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Salomon_Stage_Strive_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3711,7 +4017,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=salomon-warden13">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="salomon-warden13">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/Bindings/Templates/Salomon_Stage_Strive_Template.pdf" rel="noopener nofollow">SlideWright template: Salomon_Stage_Strive_Template.pdf</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Salomon_Stage_Strive_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Salomon_Stage_Strive_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3746,7 +4055,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-attack-hybrid">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-attack-hybrid">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Attack_Hybrid_Template.pdf" rel="noopener nofollow">SlideWright template: Tyrolia_Attack_Hybrid_Template.pdf</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Attack_Hybrid_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Tyrolia_Attack_Hybrid_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3781,7 +4093,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-attack">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-attack">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://www.slidewright.com/powderguide-ski-binding-templates/" rel="noopener nofollow">Powderguide paper template (Knut Pohl)</a>, <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a>, <a href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Attack_Template.pdf" rel="noopener nofollow">SlideWright template: Tyrolia_Attack_Template.pdf</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.slidewright.com/powderguide-ski-binding-templates/" target="_blank" rel="noopener"><span class="src-name">Powderguide paper template (Knut Pohl)</span><span class="src-host">slidewright.com &#8599;</span></a><a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a><a class="src-link" href="https://www.slidewright.com/Bindings/Templates/Tyrolia_Attack_Template.pdf" target="_blank" rel="noopener"><span class="src-name">SlideWright template: Tyrolia_Attack_Template.pdf</span><span class="src-host">slidewright.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3815,7 +4130,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=atomic-icon">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="atomic-icon">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3848,7 +4166,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=look-r22">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="look-r22">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3881,7 +4202,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=marker-fdt">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-fdt">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3918,7 +4242,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=marker-piston">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="marker-piston">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3951,7 +4278,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-attack-demo">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-attack-demo">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -3988,7 +4318,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-rp-wcr14">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-rp-wcr14">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -4021,7 +4354,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-slr-xl">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-slr-xl">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -4054,7 +4390,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-slr-xm">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-slr-xm">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -4087,7 +4426,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-slr-xs">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-slr-xs">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
@@ -4120,7 +4462,10 @@ heel — from the back of boot heel
         <a class="btn" href="designer.html#add=tyrolia-powerrail">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="tyrolia-powerrail">Copy coordinates</button>
       </div>
-      <p class="src">Measured from: <a href="https://github.com/tomahawkins/binding-templates" rel="noopener nofollow">tomahawkins/binding-templates (Templates.lean)</a></p>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://github.com/tomahawkins/binding-templates" target="_blank" rel="noopener"><span class="src-name">tomahawkins/binding-templates (Templates.lean)</span><span class="src-host">github.com &#8599;</span></a>
+      </div>
     </div>
   </div>
 </article>
