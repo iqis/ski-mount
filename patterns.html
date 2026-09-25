@@ -11,6 +11,10 @@
 <meta property="og:title" content="Binding Hole Patterns">
 <meta property="og:description" content="Measured hole patterns for alpine, AT, tech, NTN and 75 mm telemark bindings and plates, with hole coordinates in millimetres.">
 <meta property="og:url" content="https://iqis.github.io/ski-mount/patterns.html">
+<meta property="og:image" content="https://iqis.github.io/ski-mount/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2315201B'/%3E%3Cg fill='none' stroke='%23ECEFED' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='3.5'/%3E%3Ccircle cx='21' cy='21' r='3.5'/%3E%3C/g%3E%3Cpath d='M6 26h20' stroke='%23BA4A19' stroke-width='2'/%3E%3C/svg%3E">
 <style>
   html { color-scheme: light dark; }
@@ -114,6 +118,10 @@
   details pre { font-family: var(--mono); font-size: 12px; background: var(--mat); border-radius: 8px; padding: 10px 12px; overflow-x: auto; margin: 8px 0 0; color: var(--ink-2); }
   .src { font-size: 12.5px; color: var(--ink-3); }
   .src a { color: var(--ink-3); }
+  .group-head { margin: 18px 0 -2px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; gap: 10px; }
+  .group-head::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .group-head span { font-variant-numeric: tabular-nums; }
   .empty { padding: 30px 0; color: var(--ink-3); }
   footer { border-top: 1px solid var(--rule); padding-top: 16px; }
 
@@ -154,7 +162,8 @@
   </div>
 
   <div id="list" class="page" style="gap: 14px">
-    <article class="pat" id="p-22d-vice" data-cat="tele75" data-key="22d-vice" data-search="22 designs 6-hole, vice / hammerhead pin line vice · hammerhead 75 mm telemark 22d-vice conflict">
+    <h2 class="group-head" data-cat="tele75">75 mm telemark<span>6</span></h2>
+<article class="pat" id="p-22d-vice" data-cat="tele75" data-key="22d-vice" data-search="22 designs 6-hole, vice / hammerhead pin line vice · hammerhead 75 mm telemark 22d-vice conflict">
   <header>
     <h2><a class="anchor" href="#p-22d-vice" aria-label="Link to 22 Designs 6-hole, Vice / HammerHead pin line">22 Designs 6-hole, Vice / HammerHead pin line</a></h2>
     <p class="models">Vice · HammerHead</p>
@@ -348,6 +357,7 @@ heel pad — from the back of boot heel
     </div>
   </div>
 </article>
+<h2 class="group-head" data-cat="ntn">NTN telemark<span>6</span></h2>
 <article class="pat" id="p-bishop-bmf-ntn" data-cat="ntn" data-key="bishop-bmf-ntn" data-search="bishop bmf/r · bmf/3 — ntn toe cage measured from the ntn front of boot ntn telemark bishop-bmf-ntn cross-checked">
   <header>
     <h2><a class="anchor" href="#p-bishop-bmf-ntn" aria-label="Link to Bishop BMF/R · BMF/3 — NTN toe cage">Bishop BMF/R · BMF/3 — NTN toe cage</a></h2>
@@ -577,6 +587,7 @@ rear, large — from the boot toe
     </div>
   </div>
 </article>
+<h2 class="group-head" data-cat="tech">Tech / pin<span>72</span></h2>
 <article class="pat" id="p-skimo-atk-c-raider" data-cat="tech" data-key="skimo-atk-c-raider" data-search="atk c-raider  tech / pin skimo-atk-c-raider shape-only">
   <header>
     <h2><a class="anchor" href="#p-skimo-atk-c-raider" aria-label="Link to ATK C-Raider">ATK C-Raider</a></h2>
@@ -3103,6 +3114,7 @@ heel — from the back of boot heel
     </div>
   </div>
 </article>
+<h2 class="group-head" data-cat="at">AT / frame<span>7</span></h2>
 <article class="pat" id="p-marker-duke-epf" data-cat="at" data-key="marker-duke-epf" data-search="marker duke epf · baron epf (frame)  at / frame marker-duke-epf shape-only">
   <header>
     <h2><a class="anchor" href="#p-marker-duke-epf" aria-label="Link to Marker Duke EPF · Baron EPF (frame)">Marker Duke EPF · Baron EPF (frame)</a></h2>
@@ -3351,6 +3363,7 @@ heel — from the back of boot heel
     </div>
   </div>
 </article>
+<h2 class="group-head" data-cat="alpine">Alpine<span>12</span></h2>
 <article class="pat" id="p-look-racing" data-cat="alpine" data-key="look-racing" data-search="look / rossignol px racing  alpine look-racing single-source">
   <header>
     <h2><a class="anchor" href="#p-look-racing" aria-label="Link to Look / Rossignol PX Racing">Look / Rossignol PX Racing</a></h2>
@@ -3772,6 +3785,7 @@ heel — from the back of boot heel
     </div>
   </div>
 </article>
+<h2 class="group-head" data-cat="plate">Plate<span>10</span></h2>
 <article class="pat" id="p-atomic-icon" data-cat="plate" data-key="atomic-icon" data-search="atomic icon plate  plate atomic-icon single-source">
   <header>
     <h2><a class="anchor" href="#p-atomic-icon" aria-label="Link to Atomic Icon plate">Atomic Icon plate</a></h2>
@@ -4126,6 +4140,7 @@ heel — from the back of boot heel
   const count = document.getElementById('count');
   const empty = document.getElementById('empty');
   const buttons = Array.from(document.querySelectorAll('.filter'));
+  const heads = Array.from(document.querySelectorAll('.group-head'));
   let cat = 'all';
 
   const apply = () => {
@@ -4136,6 +4151,7 @@ heel — from the back of boot heel
       c.hidden = !hit;
       if (hit) n++;
     });
+    heads.forEach((h) => { h.hidden = !!t || (cat !== 'all' && h.dataset.cat !== cat); });
     count.textContent = n === cards.length ? `${cards.length} patterns` : `${n} of ${cards.length}`;
     empty.hidden = n > 0;
     const url = new URL(location.href);
