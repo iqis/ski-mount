@@ -93,13 +93,17 @@
   .cols { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
   .block { display: grid; gap: 10px; align-content: start; }
 
+  :root { --site-nav-h: 40px; }
   .site-nav { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline;
-    margin-inline: -20px; padding: 9px 20px; background: var(--ground, #ECEFED); border-bottom: 1px solid var(--rule, #D1D9D4);
-    font-size: 13.5px; }
+    padding: 10px 0; background: var(--ground, #ECEFED); box-shadow: 0 1px 0 var(--rule, #D1D9D4); font-size: 13.5px; }
   .site-nav a { color: var(--ink-2, #44524B); text-decoration: none; }
   .site-nav a:hover { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
   .site-nav-home { font-weight: 600; color: var(--ink, #15201B) !important; margin-right: 4px; }
   .site-nav [aria-current="page"] { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+
+  .site-foot { margin-top: 56px; padding: 18px 0 8px; border-top: 1px solid var(--rule, #D1D9D4);
+    display: grid; gap: 5px; font-size: 12.5px; color: var(--ink-3, #77847D); }
+  .site-foot a { color: var(--ink-2, #44524B); text-underline-offset: 3px; }
 </style>
 </head>
 <body>
@@ -114,7 +118,7 @@
     <div class="kicker">Ski mounting</div>
     <h1>Shift Ruler</h1>
     <p class="lede">A paper rule for moving a mount off the ski's recommended boot center. Centimetres on both long edges, graduated in millimetres like the mounting template, and a vertical scale on the 0 line long enough to reach the edges of the ski.</p>
-    <p class="fine">Companion to the <a href="https://claude.ai/artifact/4jMdAQSJeT4PUUHQHnGt7q">Ski Mount Hole Designer</a>, which prints the matching template and drill list.</p>
+    <p class="fine">Companion to the <a id="designer-link" href="designer.html">Ski Mount Hole Designer</a>, which prints the matching template and drill list.</p>
   </header>
 
   <section class="controls" aria-label="Sheet options">
@@ -526,5 +530,10 @@ async function saveFile(ns, filename, blob) {
   }
 })();
 </script>
+<footer class="site-foot">
+  <p><a href="index.html">Ski Mount</a> — <a href="designer.html">Designer</a> · <a href="shift-ruler.html">Shift Ruler</a> · <a href="patterns.html">Patterns</a></p>
+  <p>Measured from published maker and shop templates. Planning numbers, not a jig: test-mount before drilling.</p>
+  <p><a href="https://github.com/iqis/ski-mount" rel="noopener">Source of this site</a></p>
+</footer>
 </body>
 </html>
