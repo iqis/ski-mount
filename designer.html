@@ -84,13 +84,14 @@
   .intro h1 { margin: 0; font-weight: 500; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.05; letter-spacing: -0.012em; }
   .intro p { margin: 4px 0 0; color: var(--ink-2); max-width: 62ch; }
   .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+  @media (min-width: 900px) { .bar .seg { margin-left: auto; } }
   .bar .group { display: inline-flex; align-items: center; gap: 8px; }
   details.settings { position: relative; }
   details.settings > summary { list-style: none; border: 1px solid var(--rule); background: var(--paper); border-radius: 7px; padding: 5px 12px; min-height: 32px; display: inline-flex; align-items: center; font-size: 14px; color: var(--ink); }
   details.settings > summary::-webkit-details-marker { display: none; }
   details.settings[open] > summary { border-color: var(--ink-3); }
   .settings-panel { position: absolute; right: 0; top: calc(100% + 6px); z-index: 20; width: min(340px, calc(100vw - 40px)); background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 14px; display: grid; gap: 12px; box-shadow: 0 10px 30px color-mix(in srgb, var(--ink) 14%, transparent); }
-  .settings-panel .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; font-size: 14px; }
+  .settings-panel .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 14px; }
   .settings-panel input[type="text"] { width: 6em; }
 
   /* summary + drawing */
@@ -102,7 +103,13 @@
   .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; font-size: 13px; color: var(--ink-2); }
   .legend .item { display: inline-flex; align-items: center; gap: 6px; }
   .legend svg { width: 16px; height: 16px; flex: none; overflow: visible; }
-  .drawing-wrap, .sweep-wrap { position: relative; overflow-x: auto; }
+  .drawing-wrap, .sweep-wrap { position: relative; overflow-x: auto; overscroll-behavior-x: contain;
+    background:
+      linear-gradient(to right, var(--paper) 40%, transparent) left center / 34px 100% no-repeat,
+      linear-gradient(to left, var(--paper) 40%, transparent) right center / 34px 100% no-repeat,
+      radial-gradient(farthest-side at 0 50%, color-mix(in srgb, var(--ink) 16%, transparent), transparent) left center / 12px 100% no-repeat,
+      radial-gradient(farthest-side at 100% 50%, color-mix(in srgb, var(--ink) 16%, transparent), transparent) right center / 12px 100% no-repeat;
+    background-attachment: local, local, scroll, scroll; }
   .drawing-wrap svg { display: block; margin-inline: auto; }
   .sweep-wrap svg { display: block; width: 100%; }
   .tip { position: absolute; pointer-events: none; z-index: 5; max-width: 320px; background: var(--ink); color: var(--paper); font-size: 12.5px; line-height: 1.4; padding: 6px 9px; border-radius: 6px; font-family: var(--mono); }
@@ -218,19 +225,27 @@
     .notes { grid-template-columns: 1fr; gap: 2px; }
     .notes dd { margin-bottom: 10px; }
     .fields { grid-template-columns: 1fr; }
-    .settings-panel { right: auto; left: 0; }
+    .bar { position: relative; }
+    details.settings { position: static; }
+    .settings-panel { left: 0; right: 0; width: auto; max-height: min(70vh, 560px); overflow-y: auto; overflow-x: hidden; }
+    .settings-panel .row { grid-template-columns: minmax(0, 1fr); }
+    .settings-panel .row > .group, .settings-panel .row > select, .settings-panel .row > input { justify-self: start; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .btn, .chips button, .seg button, .tabs button { transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease; }
   }
 
+  :root { --site-nav-h: 40px; }
   .site-nav { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline;
-    margin-inline: -20px; padding: 9px 20px; background: var(--ground, #ECEFED); border-bottom: 1px solid var(--rule, #D1D9D4);
-    font-size: 13.5px; }
+    padding: 10px 0; background: var(--ground, #ECEFED); box-shadow: 0 1px 0 var(--rule, #D1D9D4); font-size: 13.5px; }
   .site-nav a { color: var(--ink-2, #44524B); text-decoration: none; }
   .site-nav a:hover { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
   .site-nav-home { font-weight: 600; color: var(--ink, #15201B) !important; margin-right: 4px; }
   .site-nav [aria-current="page"] { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+
+  .site-foot { margin-top: 56px; padding: 18px 0 8px; border-top: 1px solid var(--rule, #D1D9D4);
+    display: grid; gap: 5px; font-size: 12.5px; color: var(--ink-3, #77847D); }
+  .site-foot a { color: var(--ink-2, #44524B); text-underline-offset: 3px; }
 </style>
 </head>
 <body>
@@ -276,6 +291,7 @@
           <span><button class="btn primary" type="button" id="print-save">Save PDF</button></span>
           <p class="fine" id="print-status" aria-live="polite"></p>
           <p class="fine">Print at Actual size (100%), then check the 100 mm and 4 in bars with a ruler before drilling. Tape pages together over the gray overlap strips, tip to the left.</p>
+          <p class="fine">Moving the mount off the recommended line? <a id="ruler-link" href="shift-ruler.html">Print a shift ruler</a> and measure the offset on the ski first.</p>
         </div>
       </details>
       <details class="settings" id="settings">
@@ -801,9 +817,9 @@
     const cell = (label, v) => `<div class="stat"><span class="label">${label}</span><span class="v">${v}</span></div>`;
     $('#stats').innerHTML =
       cell('Inserts per ski', `${inserts.length}<small>from ${raw.length} holes</small>`) +
-      cell('Shared', `${raw.length - inserts.length}`) +
+      cell('Shared', `${raw.length - inserts.length}${raw.length - inserts.length ? '<small>holes on one insert</small>' : '<small>none yet</small>'}`) +
       cell('Tightest', b ? `${L(minD)}${state.unit === 'mm' ? '<small>mm</small>' : ''} <span class="pill ${b.key}">${b.short}</span>` : '—') +
-      cell('Too close', `${conflicts.length}${conflicts.length ? `<small>${nBad} red</small>` : ''}`);
+      cell('Too close', `${conflicts.length}${conflicts.length ? `<small>pairs under ${L(state.warn)}${state.unit === 'mm' ? ' mm' : '"'}, ${nBad} under ${L(state.bad)}</small>` : '<small>all clear</small>'}`);
   }
   function renderLegend() {
     const c = SLOT[state.setups[0] ? state.setups[0].slot : 0], c2 = SLOT[state.setups[1] ? state.setups[1].slot : 1];
@@ -1962,8 +1978,38 @@ async function saveFile(ns, filename, blob) {
   let raf = 0;
   window.addEventListener('resize', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { renderDrawing(); drawSweep(); }); });
 
+  // the patterns page links here as designer.html#add=<key>
+  function addFromHash() {
+    const m = /^#add=([A-Za-z0-9._+-]+)$/.exec(location.hash || '');
+    if (!m) return;
+    const key = m[1], entry = LIBMAP[key];
+    history.replaceState(null, '', location.pathname + location.search);
+    if (!entry) return;
+    const slot = freeSlot();
+    if (slot === undefined) {
+      const hint = $('#add-hint');
+      if (hint) hint.textContent = 'Three bindings is the limit — remove one, then add ' + entry.short + '.';
+      return;
+    }
+    const same = state.setups.find((x) => x.kind === entry.kind);
+    const over = { slot };
+    if (same) { over.len = same.len; over.center = same.center; }
+    const ns = newSetup(key, over);
+    state.setups.push(ns);
+    state.sweep = ns.id;
+    rebuildSetups(); renderViews(); save();
+    $('#draw-wrap').scrollIntoView({ block: 'nearest' });
+  }
+
   renderAll();
+  addFromHash();
+  window.addEventListener('hashchange', addFromHash);
 })();
 </script>
+<footer class="site-foot">
+  <p><a href="index.html">Ski Mount</a> — <a href="designer.html">Designer</a> · <a href="shift-ruler.html">Shift Ruler</a> · <a href="patterns.html">Patterns</a></p>
+  <p>Measured from published maker and shop templates. Planning numbers, not a jig: test-mount before drilling.</p>
+  <p><a href="https://github.com/iqis/ski-mount" rel="noopener">Source of this site</a></p>
+</footer>
 </body>
 </html>

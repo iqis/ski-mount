@@ -25,7 +25,7 @@
   :root {
     --ground: #ECEFED; --paper: #F9FAF9; --mat: #DEE6E1; --rule: #D1D9D4;
     --ink: #15201B; --ink-2: #44524B; --ink-3: #77847D;
-    --mark: #BA4A19;
+    --mark: #BA4A19; --s1: #2a78d6; --s2: #eb6834;
     --sans: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
     --mono: "Azeret Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   }
@@ -33,13 +33,13 @@
     :root:not([data-theme="light"]) {
       --ground: #0E1311; --paper: #151B18; --mat: #1B2520; --rule: #29342F;
       --ink: #E3EAE6; --ink-2: #A8B4AE; --ink-3: #74807A;
-      --mark: #E8703C;
+      --mark: #E8703C; --s1: #3987e5; --s2: #d95926;
     }
   }
   :root[data-theme="dark"] {
     --ground: #0E1311; --paper: #151B18; --mat: #1B2520; --rule: #29342F;
     --ink: #E3EAE6; --ink-2: #A8B4AE; --ink-3: #74807A;
-    --mark: #E8703C;
+    --mark: #E8703C; --s1: #3987e5; --s2: #d95926;
   }
 
   * { box-sizing: border-box; }
@@ -58,7 +58,38 @@
   .fine { font-size: 14px; color: var(--ink-2); max-width: 70ch; }
   .tiny { font-size: 13px; color: var(--ink-3); }
 
-  .hero { display: grid; gap: 12px; padding-block: 56px 4px; }
+  .hero { display: grid; gap: 14px; padding-block: 52px 4px; }
+  .hero-figure { margin: 8px 0 0; display: grid; gap: 8px; }
+  .hero-figure .fig { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 10px 8px; }
+  .hero-figure figcaption { font-size: 13px; color: var(--ink-3); max-width: 70ch; }
+  /* a millimetre rule, the way the templates draw one */
+  .rule { height: 9px; background-image:
+      linear-gradient(to right, var(--rule) 0.8px, transparent 0.8px),
+      linear-gradient(to right, var(--ink-3) 0.8px, transparent 0.8px);
+    background-size: 5px 5px, 25px 9px; background-position: bottom left; background-repeat: repeat-x;
+    border-bottom: 1px solid var(--rule); }
+
+  .fig { display: block; width: 100%; max-width: 100%; height: auto; }
+  .fig .ski { fill: var(--mat); stroke: var(--rule); stroke-width: 0.6; }
+  .fig .centre { stroke: var(--ink-3); stroke-width: 0.5; stroke-dasharray: 6 2 1.5 2; opacity: 0.8; }
+  .fig .ref { stroke: var(--mark); stroke-width: 1.1; }
+  .fig .reflabel { fill: var(--mark); font-family: var(--mono); font-size: 5.4px; }
+  .fig .dir { fill: var(--ink-3); font-family: var(--mono); font-size: 5px; letter-spacing: 0.1em; }
+  .fig .dir.end { text-anchor: end; }
+  .fig .bar line { stroke: var(--ink-3); stroke-width: 0.6; }
+  .fig .bar text { fill: var(--ink-3); font-family: var(--mono); font-size: 5px; }
+  .fig .hole circle { fill: var(--paper); stroke: var(--ink); stroke-width: 1; }
+  .fig .hole line { stroke: var(--ink-3); stroke-width: 0.5; }
+
+  .hero-fig .ref { stroke: var(--ink); stroke-width: 1.2; }
+  .hero-fig .diamond { fill: var(--paper); stroke: var(--ink); stroke-width: 1.2; }
+  .hero-fig .reflabel { fill: var(--ink-2); font-family: var(--mono); font-size: 5.6px; letter-spacing: 0.06em; }
+  .hero-fig .hole.a circle { stroke: var(--s1); }
+  .hero-fig .hole.b circle { stroke: var(--s2); }
+  .hero-fig .key.a circle { fill: var(--s1); stroke: none; }
+  .hero-fig .key.b circle { fill: var(--s2); stroke: none; }
+  .hero-fig .key text { fill: var(--ink-2); font-family: var(--mono); font-size: 6px; }
+
   .tools { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   .tool { display: grid; gap: 10px; align-content: start; background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 20px; }
   .tool h2 a { text-decoration: none; }
@@ -73,13 +104,17 @@
   .warn { border-left: 3px solid var(--mark); padding: 2px 0 2px 14px; }
   footer { border-top: 1px solid var(--rule); padding-top: 18px; display: grid; gap: 8px; }
 
+  :root { --site-nav-h: 40px; }
   .site-nav { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline;
-    margin-inline: -20px; padding: 9px 20px; background: var(--ground, #ECEFED); border-bottom: 1px solid var(--rule, #D1D9D4);
-    font-size: 13.5px; }
+    padding: 10px 0; background: var(--ground, #ECEFED); box-shadow: 0 1px 0 var(--rule, #D1D9D4); font-size: 13.5px; }
   .site-nav a { color: var(--ink-2, #44524B); text-decoration: none; }
   .site-nav a:hover { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
   .site-nav-home { font-weight: 600; color: var(--ink, #15201B) !important; margin-right: 4px; }
   .site-nav [aria-current="page"] { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+
+  .site-foot { margin-top: 56px; padding: 18px 0 8px; border-top: 1px solid var(--rule, #D1D9D4);
+    display: grid; gap: 5px; font-size: 12.5px; color: var(--ink-3, #77847D); }
+  .site-foot a { color: var(--ink-2, #44524B); text-underline-offset: 3px; }
 </style>
 </head>
 <body>
@@ -94,7 +129,12 @@
     <div class="kicker">Ski binding mounting</div>
     <h1>Hole patterns, insert layouts, paper templates</h1>
     <p class="lede">Two tools and a library of measured binding hole patterns, for anyone laying out inserts or moving a mount off the recommended line. Everything prints 1:1.</p>
+    <figure class="hero-figure">
+      <svg class="fig hero-fig" viewBox="-242.5 -68.0 499.0 138.0" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Two bindings laid out on one ski: every insert, with the shared ones marked"><rect class="ski" x="-242.5" y="-52.0" width="499.0" height="104.0" rx="10"/><line class="centre" x1="-242.5" y1="0" x2="256.5" y2="0"/><line class="ref" x1="0" y1="-52.0" x2="0" y2="52.0"/><path class="diamond" d="M 0 -7 L 7 0 L 0 7 L -7 0 Z"/><text class="reflabel" x="4" y="-43.0">RECOMMENDED BOOT CENTER</text><text class="dir" x="-238.5" y="47.0">TIP</text><text class="dir end" x="252.5" y="47.0">TAIL</text><g class="hole a"><circle cx="-212.50" cy="-20.00" r="3.92"/><line x1="-218.43" y1="-20.00" x2="-206.57" y2="-20.00"/><line x1="-212.50" y1="-25.93" x2="-212.50" y2="-14.07"/></g><g class="hole a"><circle cx="-212.50" cy="20.00" r="3.92"/><line x1="-218.43" y1="20.00" x2="-206.57" y2="20.00"/><line x1="-212.50" y1="14.07" x2="-212.50" y2="25.93"/></g><g class="hole a"><circle cx="-147.50" cy="-20.00" r="3.92"/><line x1="-153.43" y1="-20.00" x2="-141.57" y2="-20.00"/><line x1="-147.50" y1="-25.93" x2="-147.50" y2="-14.07"/></g><g class="hole a"><circle cx="-147.50" cy="20.00" r="3.92"/><line x1="-153.43" y1="20.00" x2="-141.57" y2="20.00"/><line x1="-147.50" y1="14.07" x2="-147.50" y2="25.93"/></g><g class="hole a"><circle cx="146.50" cy="-15.00" r="3.92"/><line x1="140.57" y1="-15.00" x2="152.43" y2="-15.00"/><line x1="146.50" y1="-20.93" x2="146.50" y2="-9.07"/></g><g class="hole a"><circle cx="146.50" cy="15.00" r="3.92"/><line x1="140.57" y1="15.00" x2="152.43" y2="15.00"/><line x1="146.50" y1="9.07" x2="146.50" y2="20.93"/></g><g class="hole a"><circle cx="226.50" cy="-15.00" r="3.92"/><line x1="220.57" y1="-15.00" x2="232.43" y2="-15.00"/><line x1="226.50" y1="-20.93" x2="226.50" y2="-9.07"/></g><g class="hole a"><circle cx="226.50" cy="15.00" r="3.92"/><line x1="220.57" y1="15.00" x2="232.43" y2="15.00"/><line x1="226.50" y1="9.07" x2="226.50" y2="20.93"/></g><g class="hole b"><circle cx="-200.10" cy="-13.00" r="3.92"/><line x1="-206.03" y1="-13.00" x2="-194.17" y2="-13.00"/><line x1="-200.10" y1="-18.93" x2="-200.10" y2="-7.07"/></g><g class="hole b"><circle cx="-200.10" cy="13.00" r="3.92"/><line x1="-206.03" y1="13.00" x2="-194.17" y2="13.00"/><line x1="-200.10" y1="7.07" x2="-200.10" y2="18.93"/></g><g class="hole b"><circle cx="-88.20" cy="-13.00" r="3.92"/><line x1="-94.12" y1="-13.00" x2="-82.28" y2="-13.00"/><line x1="-88.20" y1="-18.93" x2="-88.20" y2="-7.07"/></g><g class="hole b"><circle cx="-88.20" cy="13.00" r="3.92"/><line x1="-94.12" y1="13.00" x2="-82.28" y2="13.00"/><line x1="-88.20" y1="7.07" x2="-88.20" y2="18.93"/></g><g class="hole b"><circle cx="88.49" cy="0.00" r="3.92"/><line x1="82.56" y1="0.00" x2="94.41" y2="0.00"/><line x1="88.49" y1="-5.92" x2="88.49" y2="5.92"/></g><g class="hole b"><circle cx="115.42" cy="0.00" r="3.92"/><line x1="109.50" y1="0.00" x2="121.34" y2="0.00"/><line x1="115.42" y1="-5.92" x2="115.42" y2="5.92"/></g><g class="key a"><circle cx="-235.5" cy="63.0" r="3"/><text x="-229.5" y="65.0">Strive 12/14</text></g><g class="key b"><circle cx="-160.9" cy="63.0" r="3"/><text x="-154.9" y="65.0">Voile 4-hole</text></g></svg>
+      <figcaption>Salomon Strive 12/14 on a 325 mm boot and a Voilé 4-hole telemark toe on a 320 mm heel-to-pin boot, both at the recommended boot centre — drawn from the library, to scale. That is what the designer opens with.</figcaption>
+    </figure>
   </header>
+  <div class="rule" aria-hidden="true"></div>
 
   <section class="tools">
     <article class="tool">
@@ -165,5 +205,6 @@
     <p class="tiny">Built for the shop bench. Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
   </footer>
 </main>
+
 </body>
 </html>
