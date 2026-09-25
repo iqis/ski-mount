@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shift Ruler</title>
+<meta name="description" content="A printable 1:1 paper rule for moving a ski binding mount off the recommended boot centre.">
+<link rel="canonical" href="https://iqis.github.io/ski-mount/shift-ruler.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ski Mount">
+<meta property="og:title" content="Shift Ruler">
+<meta property="og:description" content="A printable 1:1 paper rule for moving a ski binding mount off the recommended boot centre.">
+<meta property="og:url" content="https://iqis.github.io/ski-mount/shift-ruler.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2315201B'/%3E%3Cg fill='none' stroke='%23ECEFED' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='3.5'/%3E%3Ccircle cx='21' cy='21' r='3.5'/%3E%3C/g%3E%3Cpath d='M6 26h20' stroke='%23BA4A19' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+  html { color-scheme: light dark; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Jost:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #ECEFED; --paper: #F9FAF9; --mat: #DEE6E1; --rule: #D1D9D4;
+    --ink: #15201B; --ink-2: #44524B; --ink-3: #77847D;
+    --mark: #BA4A19; --ok: #2B7348; --ok-soft: #D5EBDC; --warn: #975A00; --warn-soft: #F3E3C4;
+    --sans: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+    --mono: "Azeret Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0E1311; --paper: #151B18; --mat: #1B2520; --rule: #29342F;
+      --ink: #E3EAE6; --ink-2: #A8B4AE; --ink-3: #74807A;
+      --mark: #E8703C; --ok: #6CC891; --ok-soft: #163322; --warn: #E6A847; --warn-soft: #382A11;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0E1311; --paper: #151B18; --mat: #1B2520; --rule: #29342F;
+    --ink: #E3EAE6; --ink-2: #A8B4AE; --ink-3: #74807A;
+    --mark: #E8703C; --ok: #6CC891; --ok-soft: #163322; --warn: #E6A847; --warn-soft: #382A11;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.5; padding-inline: 20px; padding-block: 30px 72px; }
+  .page { max-width: 880px; margin-inline: auto; display: grid; gap: 22px; }
+  h1 { margin: 0; font-size: 27px; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+  h2 { margin: 0; font-size: 15px; font-weight: 600; }
+  p { margin: 0; }
+  a { color: var(--ink); text-underline-offset: 2px; }
+  button, input, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .label { font-size: 11px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); }
+  .lede { color: var(--ink-2); max-width: 62ch; }
+  .fine { font-size: 13px; color: var(--ink-2); max-width: 72ch; }
+
+  .masthead { display: grid; gap: 7px; }
+  .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mark); }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 16px 22px; align-items: end; padding: 14px 16px; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; }
+  .field { display: grid; gap: 5px; min-width: 0; }
+  select, input[type="number"] { font-family: var(--mono); font-size: 13px; background: var(--ground); border: 1px solid var(--rule); border-radius: 7px; padding: 5px 8px; min-height: 32px; max-width: 100%; }
+  input[type="number"] { width: 7.5em; }
+  .check { display: flex; gap: 8px; align-items: center; font-size: 13.5px; min-height: 32px; }
+  .check input { accent-color: var(--ink); width: 15px; height: 15px; }
+
+  .sheet { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
+  .sheet-head { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between; }
+  .count { font-family: var(--mono); font-size: 13px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .paper-well { overflow-x: auto; background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 10px; }
+  :root[data-theme="dark"] .paper-well, :root:not([data-theme="light"]) .paper-well { background: #fff; }
+  .strip { display: block; max-width: 100%; height: auto; }
+  .strip .cut { fill: none; stroke: #9aa5a0; stroke-width: 0.2; }
+  .strip .axis { stroke: #6d7873; stroke-width: 0.1; }
+  .strip .tick { stroke: #16211c; }
+  .strip .centre { stroke: #6d7873; stroke-width: 0.2; stroke-dasharray: 5 1.2 1.2 1.2; }
+  .strip .num { fill: #16211c; font-family: var(--mono); text-anchor: middle; }
+  .strip .across-num { fill: #4b564f; font-family: var(--mono); font-size: 1.6px; }
+  .strip .unit { fill: #8b9691; font-family: var(--mono); font-size: 1.7px; }
+  .strip .zero { fill: #fff; stroke: #BA4A19; stroke-width: 0.35; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .save { background: var(--ink); color: var(--paper); border: 0; border-radius: 8px; padding: 9px 18px; font-weight: 500; cursor: pointer; }
+  .save:disabled { opacity: 0.45; cursor: not-allowed; }
+  .status { font-size: 13px; color: var(--ink-2); }
+  .note { border-left: 2px solid var(--mark); padding-left: 12px; font-size: 13.5px; color: var(--ink-2); }
+  .warn { background: var(--warn-soft); color: var(--warn); border-radius: 8px; padding: 8px 12px; font-size: 13px; }
+
+  ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 10px; }
+  ol.steps li { counter-increment: step; display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: baseline; }
+  ol.steps li::before { content: counter(step); font-family: var(--mono); font-size: 12px; color: var(--mark); }
+  .cols { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .block { display: grid; gap: 10px; align-content: start; }
+
+  .site-nav { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline;
+    margin-inline: -20px; padding: 9px 20px; background: var(--ground, #ECEFED); border-bottom: 1px solid var(--rule, #D1D9D4);
+    font-size: 13.5px; }
+  .site-nav a { color: var(--ink-2, #44524B); text-decoration: none; }
+  .site-nav a:hover { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+  .site-nav-home { font-weight: 600; color: var(--ink, #15201B) !important; margin-right: 4px; }
+  .site-nav [aria-current="page"] { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Site">
+  <a class="site-nav-home" href="index.html">Ski Mount</a>
+  <a href="designer.html">Designer</a>
+  <a href="shift-ruler.html" aria-current="page">Shift Ruler</a>
+  <a href="patterns.html">Patterns</a>
+</nav>
+<main class="page">
+  <header class="masthead">
+    <div class="kicker">Ski mounting</div>
+    <h1>Shift Ruler</h1>
+    <p class="lede">A paper rule for moving a mount off the ski's recommended boot center. Centimetres on both long edges, graduated in millimetres like the mounting template, and a vertical scale on the 0 line long enough to reach the edges of the ski.</p>
+    <p class="fine">Companion to the <a href="https://claude.ai/artifact/4jMdAQSJeT4PUUHQHnGt7q">Ski Mount Hole Designer</a>, which prints the matching template and drill list.</p>
+  </header>
+
+  <section class="controls" aria-label="Sheet options">
+    <div class="field">
+      <label class="label" for="range">Range</label>
+      <select id="range"></select>
+    </div>
+    <div class="field">
+      <label class="label" for="across">Across the ski</label>
+      <select id="across"></select>
+    </div>
+    <div class="field">
+      <label class="label" for="cal">Printed 100 mm bar</label>
+      <input id="cal" type="number" step="0.1" min="80" max="120" inputmode="decimal">
+    </div>
+    <div class="field">
+      <label class="label" for="paper">Paper</label>
+      <select id="paper">
+        <option value="letter">Letter</option>
+        <option value="a4">A4</option>
+        <option value="legal">Legal</option>
+        <option value="tabloid">Tabloid 11x17</option>
+        <option value="a3">A3</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="sheet" aria-label="Strip preview">
+    <div class="sheet-head">
+      <h2>One card, actual size</h2>
+      <output class="count" id="count"></output>
+    </div>
+    <div class="paper-well" id="well"></div>
+    <p class="fine">On screen this is close to true size; the PDF is the exact one. Print at Actual size (100%) and measure the 100 mm bar on the sheet before you cut.</p>
+    <p class="fine" id="cal-note"></p>
+    <div class="warn" id="warn" hidden></div>
+    <div class="actions">
+      <button class="save" id="save" type="button">Save the PDF</button>
+      <span class="status" id="status"></span>
+    </div>
+  </section>
+
+  <div class="cols">
+    <section class="block">
+      <h2>How to use it</h2>
+      <ol class="steps">
+        <li>Cut one card out along its border, then cut out the diamond at 0.</li>
+        <li>Lay it on the ski with the diamond over the recommended boot center mark and the numbers running the way you want to move the mount — toward the tip to go forward, toward the tail to go back.</li>
+        <li>Square it up on the vertical scale: read where each ski edge crosses it. Equal readings mean the card is centred and square, and twice the reading is the ski's width there.</li>
+        <li>Mark the ski at the centimetre you want, against the edge of the card. That mark is the new boot center: line the mounting template's diamond up with it.</li>
+      </ol>
+    </section>
+    <section class="block">
+      <h2>Reading the scale</h2>
+      <p class="fine">Ticks are 1 mm, longer at 5 mm, longest and numbered at every centimetre. Both long edges carry the same scale, so one is always next to the mark you are making, and every tick runs right to the cut edge.</p>
+      <p class="note">The card runs one way only. Turn it end for end to shift the mount the other way — the numbers read the same, the direction follows the ski.</p>
+      <h2>If the print comes out small</h2>
+      <p class="fine">Print dialogs shrink pages to the printer's own printable area — Chrome's <em>Default</em> scale does exactly that, and a Letter PDF sent to A4 paper (or the reverse) shrinks too. Pick <em>Actual size</em> or <em>Custom 100%</em>, and set the printer's paper to the size you chose here. If it still comes out small, measure the printed 100 mm bar, type that number in <em>Printed 100 mm bar</em>, and the PDF is redrawn that much bigger to cancel it.</p>
+      <p class="fine">The vertical scale reads out from the ski's centerline in millimetres, half-millimetre ticks within the first centimetre, numbered every centimetre. A 120 mm card reaches the edges of a 110 mm ski; on a narrower ski its long edges overhang, so pick 90 mm if you want them to land on the topsheet.</p>
+    </section>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+(() => {
+  'use strict';
+  /* Shift ruler cards - shared by the mounting-template print sheet and the Shift Ruler page.
+
+   A rectangle: cut it out, cut out the diamond at 0, lay it on the ski with the diamond over the
+   recommended boot center and the numbers running the way you want to move the mount, then mark
+   the ski at the centimetre you want against the card's edge. The vertical scale on the 0 line
+   reads out from the ski centerline and is long enough to reach the edges of a normal ski
+   (waists run about 70-110 mm): equal readings at both edges = centred and square. The card runs
+   one way; turn it end for end to shift the other way.
+
+   Graduations are metric, like the mounting template: 1 mm ticks, longer at 5 mm, longest and
+   numbered at every centimetre, the same scale on both long edges. */
+const RULER = { head: 16, tail: 8, margin: 8, sheetHead: 36, pm: 10 };
+const RULER_RANGES = [
+  { id: 'cm6', label: '0 to 6 cm', span: 60 },
+  { id: 'cm4', label: '0 to 4 cm', span: 40 },
+  { id: 'cm12', label: '0 to 12 cm', span: 120 }
+];
+const RULER_ACROSS = [
+  { id: 'a120', label: '120 mm - reaches the edges of a 110 mm ski', mm: 120 },
+  { id: 'a90', label: '90 mm - reaches the edges of an 80 mm ski', mm: 90 },
+  { id: 'a60', label: '60 mm - compact', mm: 60 }
+];
+
+function rulerSpec(opt) {
+  const r = RULER_RANGES.find((x) => x.id === (opt && opt.range)) || RULER_RANGES[0];
+  const a = RULER_ACROSS.find((x) => x.id === (opt && opt.across)) || RULER_ACROSS[0];
+  return {
+    id: r.id, label: r.label, span: r.span,
+    acrossId: a.id, acrossLabel: a.label, across: a.mm,
+    w: RULER.head + r.span + RULER.tail, h: a.mm,
+    zero: RULER.head
+  };
+}
+
+function rulerLayout(pw, ph, opt) {
+  const s = rulerSpec(opt);
+  const grid = (W, H) => {
+    const across = W - 2 * RULER.margin, down = H - RULER.pm - RULER.sheetHead - RULER.margin;
+    const cols = Math.floor(across / s.w), rows = Math.floor(down / s.h);
+    return { W, H, cols: Math.max(1, cols), rows: Math.max(1, rows), n: Math.max(0, cols) * Math.max(0, rows), fits: cols >= 1 && rows >= 1, spec: s };
+  };
+  const portrait = grid(Math.min(pw, ph), Math.max(pw, ph));
+  const landscape = grid(Math.max(pw, ph), Math.min(pw, ph));
+  return landscape.n > portrait.n ? landscape : portrait;
+}
+
+// The graduations themselves, so the PDF and the on-screen preview cannot drift apart.
+function rulerTicks(s) {
+  const along = [], across = [];
+  for (let v = 0; v <= s.span; v++) {
+    const cm = v % 10 === 0, five = v % 5 === 0;
+    along.push({
+      v,
+      len: cm ? 4.2 : five ? 2.8 : 1.6,
+      lw: cm ? 0.2 : five ? 0.13 : 0.08,
+      label: cm && v > 0 ? String(v / 10) : null
+    });
+  }
+  // out from the ski centerline: half-millimetre ticks in the first centimetre, then millimetres
+  const reach = s.across / 2 - 1;
+  for (let q = 1; q <= reach * 2; q++) {
+    const a = q / 2, whole = q % 2 === 0;
+    if (!whole && a > 10) continue;
+    const ten = whole && a % 10 === 0, five = whole && a % 5 === 0;
+    across.push({ a, len: ten ? 5 : five ? 3.2 : whole ? 2 : 1.1, lw: five ? 0.15 : 0.08, label: ten ? String(a) : null });
+  }
+  return { along, across };
+}
+
+function drawRulerStrip(doc, x, y, opt) {
+  const s = rulerSpec(opt), t = rulerTicks(s);
+  const mid = y + s.h / 2, at = (v) => x + s.zero + v, xz = at(0);
+  doc.setLineDashPattern([], 0);
+  doc.setDrawColor(150); doc.setLineWidth(0.2);
+  doc.rect(x, y, s.w, s.h, 'S');                       // cut on this line
+  // the same centimetre scale on both long edges, ticks running to the cut edge
+  doc.setDrawColor(20); doc.setTextColor(0);
+  [[y, 1], [y + s.h, -1]].forEach(([edge, dir]) => {
+    t.along.forEach((k) => {
+      doc.setLineWidth(k.lw);
+      doc.line(at(k.v), edge, at(k.v), edge + dir * k.len);
+      if (k.label) {
+        doc.setFontSize(5.5);
+        doc.text(k.label, at(k.v), edge + dir * 6.6 + (dir > 0 ? 0 : -0.4), { align: 'center' });
+      }
+    });
+    doc.setFontSize(4.5); doc.setTextColor(110);
+    doc.text('cm', at(s.span) + 2.5, edge + dir * 6.6 + (dir > 0 ? 0 : -0.4));
+    doc.setTextColor(0);
+  });
+  // the 0 line, with a scale out from the ski centerline
+  doc.setDrawColor(20); doc.setLineWidth(0.15);
+  doc.line(xz, y + 0.8, xz, y + s.h - 0.8);
+  t.across.forEach((k) => {
+    doc.setLineWidth(k.lw);
+    [mid - k.a, mid + k.a].forEach((yy) => {
+      doc.line(xz, yy, xz - k.len, yy);
+      if (k.label) {
+        doc.setFontSize(4.5);
+        doc.text(k.label, xz - 5.6, yy + 0.6, { align: 'right' });
+      }
+    });
+  });
+  if (s.h >= 80) {
+    doc.setFontSize(4.5); doc.setTextColor(110);
+    doc.text('ski edges read the same = centred', x + 3.4, mid - 8, { angle: 90 });
+  }
+  // ski centerline, and the one target: cut this diamond out
+  doc.setDrawColor(70); doc.setLineWidth(0.2); doc.setLineDashPattern([5, 1.2, 1.2, 1.2], 0);
+  doc.line(x + 3, mid, x + s.w - 3, mid);
+  doc.setLineDashPattern([], 0);
+  const d = 4;
+  doc.setFillColor(255, 255, 255); doc.setDrawColor(0); doc.setLineWidth(0.35);
+  doc.lines([[d, d], [-d, d], [-d, -d], [d, -d]], xz, mid - d, [1, 1], 'FD', true);
+  doc.setFontSize(4.5); doc.setTextColor(110);
+  doc.text('0 = recommended boot center', x + s.w - 3, mid - 1.8, { align: 'right' });
+}
+
+// One portrait sheet of cards, drawn on the current page.
+function rulerSheet(doc, L, opt) {
+  const m = RULER.margin, s = L.spec;
+  doc.setLineDashPattern([], 0);
+  doc.setDrawColor(0); doc.setTextColor(0); doc.setFillColor(0);
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(10);
+  doc.text('Shift rulers  ' + s.label + '  from the ski\'s recommended boot center', m, RULER.pm + 4);
+  doc.setFont('helvetica', 'normal');
+  // check bars: measure these before trusting anything else on the sheet
+  const by = RULER.pm + 9.5;
+  doc.setLineWidth(0.3);
+  doc.line(m, by, m + 100, by); doc.line(m, by - 1.7, m, by + 1.7); doc.line(m + 100, by - 1.7, m + 100, by + 1.7);
+  doc.setLineWidth(0.2);
+  for (let k = 10; k < 100; k += 10) doc.line(m + k, by - 0.8, m + k, by + 0.8);
+  doc.setFontSize(6.5); doc.text('100 mm', m + 102, by + 1);
+  doc.setLineWidth(0.3);
+  doc.line(m, by + 6, m + 101.6, by + 6); doc.line(m, by + 4.3, m, by + 7.7); doc.line(m + 101.6, by + 4.3, m + 101.6, by + 7.7);
+  doc.setLineWidth(0.2);
+  for (let k = 1; k < 4; k++) doc.line(m + 25.4 * k, by + 5.2, m + 25.4 * k, by + 6.8);
+  doc.text('4 in', m + 103.6, by + 7.5);
+  const note = calNote(opt && opt.cal ? opt.cal : 1);
+  if (note) { doc.setFontSize(5.5); doc.setTextColor(120); doc.text(note, m + 140, by + 1); }
+  doc.setTextColor(60); doc.setFontSize(6.5);
+  const how = 'Cut one card out and cut out the diamond at 0. Lay it on the ski with the diamond over the recommended boot center '
+    + 'mark and the numbers running the way you want to move the mount. Square it up on the vertical scale: both ski edges should '
+    + 'read the same out from the centerline. Then mark the ski at the centimetre you want, against the edge of the card - that mark '
+    + 'is the new boot center. Turn the card end for end to shift the other way. Print at Actual size (100%) and measure both bars first.';
+  doc.text(doc.splitTextToSize(how, L.W - 2 * m), m, RULER.pm + 21);
+  const top = RULER.pm + RULER.sheetHead;
+  const gapX = (L.W - 2 * m - L.cols * s.w) / Math.max(1, L.cols);
+  const gapY = Math.max(0, Math.min(6, (L.H - top - m - L.rows * s.h) / Math.max(1, L.rows)));
+  for (let r = 0; r < L.rows; r++) {
+    for (let c = 0; c < L.cols; c++) {
+      const px = m + c * (s.w + gapX), py = top + r * (s.h + gapY);
+      if (py + s.h > L.H - m || px + s.w > L.W - m) continue;
+      drawRulerStrip(doc, px, py, opt);
+    }
+  }
+}
+
+// The same card as SVG markup, in millimetre user units, for an on-screen preview.
+function rulerStripSvg(opt) {
+  const s = rulerSpec(opt), t = rulerTicks(s);
+  const n = (v) => Number(v).toFixed(3);
+  const at = (v) => n(s.zero + v), xz = s.zero, mid = s.h / 2;
+  const o = [`<svg class="strip" viewBox="-1 -1 ${s.w + 2} ${s.h + 2}" width="${s.w + 2}mm" height="${s.h + 2}mm" role="img" aria-label="Shift ruler card, ${s.label}, ${s.across} mm across">`];
+  o.push(`<rect x="0" y="0" width="${s.w}" height="${s.h}" class="cut"/>`);
+  [[0, 1], [s.h, -1]].forEach(([edge, dir]) => {
+    t.along.forEach((k) => {
+      o.push(`<line x1="${at(k.v)}" y1="${n(edge)}" x2="${at(k.v)}" y2="${n(edge + dir * k.len)}" class="tick" stroke-width="${k.lw}"/>`);
+      if (k.label) o.push(`<text x="${at(k.v)}" y="${n(edge + dir * 6.6 + (dir > 0 ? 0 : -0.4))}" class="num" font-size="2.2">${k.label}</text>`);
+    });
+    o.push(`<text x="${at(s.span + 2.5)}" y="${n(edge + dir * 6.6 + (dir > 0 ? 0 : -0.4))}" class="unit">cm</text>`);
+  });
+  o.push(`<line x1="${at(0)}" y1="0.8" x2="${at(0)}" y2="${n(s.h - 0.8)}" class="tick" stroke-width="0.15"/>`);
+  t.across.forEach((k) => {
+    [mid - k.a, mid + k.a].forEach((yy) => {
+      o.push(`<line x1="${n(xz)}" y1="${n(yy)}" x2="${n(xz - k.len)}" y2="${n(yy)}" class="tick" stroke-width="${k.lw}"/>`);
+      if (k.label) o.push(`<text x="${n(xz - 5.6)}" y="${n(yy + 0.6)}" class="across-num" text-anchor="end">${k.label}</text>`);
+    });
+  });
+  o.push(`<line x1="3" y1="${n(mid)}" x2="${n(s.w - 3)}" y2="${n(mid)}" class="centre"/>`);
+  o.push(`<path d="M ${n(xz)} ${n(mid - 4)} L ${n(xz + 4)} ${n(mid)} L ${n(xz)} ${n(mid + 4)} L ${n(xz - 4)} ${n(mid)} Z" class="zero"/>`);
+  o.push(`<text x="${n(s.w - 3)}" y="${n(mid - 1.8)}" class="unit" text-anchor="end">0 = recommended boot center</text>`);
+  if (s.h >= 80) o.push(`<text class="unit" transform="translate(${n(3.4)} ${n(mid - 8)}) rotate(-90)">ski edges read the same = centred</text>`);
+  o.push('</svg>');
+  return o.join('');
+}
+
+/* Printer calibration. Printers and print dialogs shrink a page to their printable area (Chrome's
+   "Default" scale) or to a different paper size; the result is a template a few per cent small.
+   Measure the printed 100 mm bar, pass 100 / measured as k, and every page is drawn k times
+   bigger about its centre, so the printer's own shrink lands it back at 1:1. Call it on a fresh
+   page, before drawing on it. */
+function pageCalibration(doc, k) {
+  if (!(k > 0) || Math.abs(k - 1) < 0.0005) return 1;
+  if (!doc.Matrix || !doc.setCurrentTransformationMatrix) return 1;
+  const sf = doc.internal.scaleFactor;                       // user units -> PDF points
+  const cx = doc.internal.pageSize.getWidth() / 2 * sf;
+  const cy = doc.internal.pageSize.getHeight() / 2 * sf;
+  doc.setCurrentTransformationMatrix(new doc.Matrix(k, 0, 0, k, cx * (1 - k), cy * (1 - k)));
+  return k;
+}
+
+// 100 / the length the 100 mm bar actually measured on paper, clamped to something sane.
+function calFactor(measured) {
+  const v = Number(measured);
+  if (!isFinite(v) || v < 80 || v > 120) return 1;
+  return 100 / v;
+}
+
+// A line for the sheet, so a calibrated print says so on its face.
+function calNote(k) {
+  return Math.abs(k - 1) < 0.0005 ? '' : 'Drawn at ' + (k * 100).toFixed(1) + '% for printer calibration - the bars still measure 100 mm and 4 in on paper.';
+}
+
+/* Saving a generated file. Inside a published artifact the viewer grants a downloads namespace
+   and confirms each save; on the open web an anchor does it directly. */
+const ARTIFACT_VIEW = !!(window.claude && typeof window.claude.use === 'function');
+
+async function saveFile(ns, filename, blob) {
+  if (ns) { await ns.save({ filename, data: blob }); return; }
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.rel = 'noopener';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+
+  const PAPER = { letter: ['Letter', 279.4, 215.9], a4: ['A4', 297, 210], legal: ['Legal', 355.6, 215.9], tabloid: ['Tabloid 11x17', 431.8, 279.4], a3: ['A3', 420, 297] };
+  const $ = (s) => document.querySelector(s);
+  const KEY = 'shift-ruler/v2';
+  const state = load();
+
+  function load() {
+    const d = { range: 'cm6', across: 'a120', paper: 'letter', cal: 100 };
+    try {
+      const o = JSON.parse(localStorage.getItem(KEY) || '{}');
+      if (RULER_RANGES.some((r) => r.id === o.range)) d.range = o.range;
+      if (RULER_ACROSS.some((a) => a.id === o.across)) d.across = o.across;
+      if (PAPER[o.paper]) d.paper = o.paper;
+      if (Number(o.cal) >= 80 && Number(o.cal) <= 120) d.cal = Number(o.cal);
+    } catch (e) { /* private window, blocked storage: the defaults are fine */ }
+    return d;
+  }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* nothing to do */ }
+  }
+
+  let downloads = null, downloadsChecked = false;
+  const canSave = () => !!downloads || !ARTIFACT_VIEW;
+  const opt = () => ({ range: state.range, across: state.across, cal: calFactor(state.cal) });
+  const plan = () => { const [, pw, ph] = PAPER[state.paper]; return rulerLayout(pw, ph, opt()); };
+
+  function render() {
+    const L = plan(), s = L.spec;
+    $('#well').innerHTML = rulerStripSvg(opt());
+    $('#count').textContent = L.fits
+      ? `${L.n} card${L.n > 1 ? 's' : ''} per ${L.W <= L.H ? 'portrait' : 'landscape'} sheet - ${L.cols} across, ${L.rows} down, ${s.w} x ${s.h} mm each`
+      : `${s.w} x ${s.h} mm does not fit on ${PAPER[state.paper][0]}`;
+    const warn = $('#warn');
+    warn.hidden = L.fits;
+    if (!L.fits) warn.textContent = `A ${s.label} card ${s.across} mm across is ${s.w} x ${s.h} mm — too big for ${PAPER[state.paper][0]}. Pick Legal, Tabloid or A3, a shorter range, or a narrower bar.`;
+    const k = calFactor(state.cal);
+    $('#cal-note').textContent = Math.abs(k - 1) < 0.0005
+      ? 'If a print comes out small, measure its 100 mm bar and type that number above: the next PDF is drawn that much bigger to cancel the shrink.'
+      : `Drawn at ${(k * 100).toFixed(1)}% to cancel your printer's shrink. Print it the same way you printed the sheet you measured, and the bar should land on 100 mm.`;
+    $('#save').disabled = !canSave() || !L.fits;
+    if (downloadsChecked && !canSave()) $('#status').textContent = 'Saving files is not available in this view.';
+  }
+
+  function makePdf() {
+    const J = window.jspdf && window.jspdf.jsPDF;
+    if (!J) throw { code: 'lib', message: 'The PDF library did not load. Reload the page and try again.' };
+    const L = plan();
+    const doc = new J({ unit: 'mm', format: [L.W, L.H], orientation: L.W <= L.H ? 'portrait' : 'landscape' });
+    pageCalibration(doc, calFactor(state.cal));
+    rulerSheet(doc, L, opt());
+    return doc.output('blob');
+  }
+
+  async function savePdf() {
+    const status = $('#status'), btn = $('#save');
+    if (!canSave()) { status.textContent = 'Saving files is not available in this view.'; return; }
+    btn.disabled = true;
+    status.textContent = 'Building the PDF...';
+    try {
+      const blob = makePdf();
+      const filename = `shift-ruler-${plan().spec.id}-${plan().spec.across}mm-${state.paper}.pdf`;
+      status.textContent = downloads ? 'Confirm the save...' : 'Saving...';
+      await saveFile(downloads, filename, blob);
+      status.textContent = `Saved ${filename}. Print it at Actual size.`;
+    } catch (err) {
+      const code = err && err.code;
+      status.textContent = code === 'declined' ? 'Not saved.'
+        : code === 'rate_limited' ? 'A save prompt is already open - finish that one first.'
+        : code === 'lib' ? err.message
+        : code ? 'Saving is not available in this view.' : 'Could not build the PDF.';
+    } finally {
+      render();
+    }
+  }
+
+  const sel = $('#range');
+  RULER_RANGES.forEach((r) => {
+    const o = document.createElement('option');
+    o.value = r.id; o.textContent = `${r.label}  (${r.span} mm)`;
+    sel.appendChild(o);
+  });
+  sel.value = state.range;
+  const asel = $('#across');
+  RULER_ACROSS.forEach((a) => {
+    const o = document.createElement('option');
+    o.value = a.id; o.textContent = a.label;
+    asel.appendChild(o);
+  });
+  asel.value = state.across;
+  $('#cal').value = String(state.cal);
+  $('#paper').value = state.paper;
+  sel.addEventListener('change', (e) => { state.range = e.target.value; save(); render(); });
+  asel.addEventListener('change', (e) => { state.across = e.target.value; save(); render(); });
+  $('#cal').addEventListener('change', (e) => {
+    const v = Number(e.target.value);
+    state.cal = (isFinite(v) && v >= 80 && v <= 120) ? v : 100;
+    e.target.value = String(state.cal);
+    save(); render();
+  });
+  $('#paper').addEventListener('change', (e) => { state.paper = e.target.value; save(); render(); });
+  $('#save').addEventListener('click', savePdf);
+
+  render();
+  if (window.claude && typeof window.claude.use === 'function') {
+    window.claude.use('downloads')
+      .then((ns) => { downloads = ns; })
+      .catch(() => { downloads = null; })
+      .finally(() => { downloadsChecked = true; render(); });
+  } else {
+    downloadsChecked = true;
+    render();
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iqis.github.io/ski-mount/sitemap.xml
