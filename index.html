@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ski Mount</title>
+<meta name="description" content="Ski binding mounting hole patterns, an insert layout designer, and printable 1:1 paper templates.">
+<link rel="canonical" href="https://iqis.github.io/ski-mount/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ski Mount">
+<meta property="og:title" content="Ski Mount">
+<meta property="og:description" content="Ski binding mounting hole patterns, an insert layout designer, and printable 1:1 paper templates.">
+<meta property="og:url" content="https://iqis.github.io/ski-mount/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2315201B'/%3E%3Cg fill='none' stroke='%23ECEFED' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='3.5'/%3E%3Ccircle cx='21' cy='21' r='3.5'/%3E%3C/g%3E%3Cpath d='M6 26h20' stroke='%23BA4A19' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+  html { color-scheme: light dark; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Jost:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #ECEFED; --paper: #F9FAF9; --mat: #DEE6E1; --rule: #D1D9D4;
+    --ink: #15201B; --ink-2: #44524B; --ink-3: #77847D;
+    --mark: #BA4A19;
+    --sans: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+    --mono: "Azeret Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0E1311; --paper: #151B18; --mat: #1B2520; --rule: #29342F;
+      --ink: #E3EAE6; --ink-2: #A8B4AE; --ink-3: #74807A;
+      --mark: #E8703C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0E1311; --paper: #151B18; --mat: #1B2520; --rule: #29342F;
+    --ink: #E3EAE6; --ink-2: #A8B4AE; --ink-3: #74807A;
+    --mark: #E8703C;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 0 72px; }
+  .page { max-width: 900px; margin-inline: auto; display: grid; gap: 34px; }
+  h1 { margin: 0; font-size: 40px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.1; text-wrap: balance; }
+  h2 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  h3 { margin: 0; font-size: 16px; font-weight: 600; }
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 1.1em; }
+  li { margin-block: 3px; }
+  a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--ink-3); }
+  a:hover { text-decoration-color: var(--mark); }
+  .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mark); }
+  .lede { color: var(--ink-2); font-size: 18px; max-width: 58ch; }
+  .fine { font-size: 14px; color: var(--ink-2); max-width: 70ch; }
+  .tiny { font-size: 13px; color: var(--ink-3); }
+
+  .hero { display: grid; gap: 12px; padding-block: 56px 4px; }
+  .tools { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .tool { display: grid; gap: 10px; align-content: start; background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 20px; }
+  .tool h2 a { text-decoration: none; }
+  .tool h2 a::after { content: " →"; color: var(--mark); }
+  .tool ul { font-size: 14.5px; color: var(--ink-2); }
+  .section { display: grid; gap: 14px; }
+  .stats { display: grid; gap: 1px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); background: var(--rule); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+  .stat { background: var(--paper); padding: 14px 16px; display: grid; gap: 2px; }
+  .stat b { font-family: var(--mono); font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 12.5px; color: var(--ink-3); }
+  .cols { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .warn { border-left: 3px solid var(--mark); padding: 2px 0 2px 14px; }
+  footer { border-top: 1px solid var(--rule); padding-top: 18px; display: grid; gap: 8px; }
+
+  .site-nav { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline;
+    margin-inline: -20px; padding: 9px 20px; background: var(--ground, #ECEFED); border-bottom: 1px solid var(--rule, #D1D9D4);
+    font-size: 13.5px; }
+  .site-nav a { color: var(--ink-2, #44524B); text-decoration: none; }
+  .site-nav a:hover { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+  .site-nav-home { font-weight: 600; color: var(--ink, #15201B) !important; margin-right: 4px; }
+  .site-nav [aria-current="page"] { color: var(--ink, #15201B); text-decoration: underline; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Site">
+  <a class="site-nav-home" href="index.html" aria-current="page">Ski Mount</a>
+  <a href="designer.html">Designer</a>
+  <a href="shift-ruler.html">Shift Ruler</a>
+  <a href="patterns.html">Patterns</a>
+</nav>
+<main class="page">
+  <header class="hero">
+    <div class="kicker">Ski binding mounting</div>
+    <h1>Hole patterns, insert layouts, paper templates</h1>
+    <p class="lede">Two tools and a library of measured binding hole patterns, for anyone laying out inserts or moving a mount off the recommended line. Everything prints 1:1.</p>
+  </header>
+
+  <section class="tools">
+    <article class="tool">
+      <h2><a href="designer.html">Mount Hole Designer</a></h2>
+      <p class="fine">Lay several bindings out on one ski and see which holes can share an insert, which sit too close to drill, and where each boot centre lands.</p>
+      <ul>
+        <li>113 patterns, or type your own hole coordinates</li>
+        <li>Ladder positions: step a binding fore and aft in fixed increments</li>
+        <li>Shared-insert and spacing analysis, with a drill list</li>
+        <li>Tiled 1:1 PDF template with check bars and a cut-out diamond</li>
+        <li>Adapter plate modeller: STL, DXF and a design file for CAD</li>
+      </ul>
+    </article>
+    <article class="tool">
+      <h2><a href="shift-ruler.html">Shift Ruler</a></h2>
+      <p class="fine">A paper rule for moving a mount off the ski's recommended boot centre. Cut one out, line the diamond up with the factory mark, and mark the new centre.</p>
+      <ul>
+        <li>Centimetres on both long edges, graduated in millimetres</li>
+        <li>A vertical scale that reaches the edges of the ski, so the card sits square</li>
+        <li>0 to 6, 4 or 12 cm; Letter, A4, Legal, Tabloid or A3</li>
+        <li>Printer calibration that cancels a print dialog's shrink</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>The pattern library</h2>
+    <div class="stats">
+      <div class="stat"><b>113</b><span>patterns</span></div>
+      <div class="stat"><b>31/32</b><span>Jigarex plates covered</span></div>
+      <div class="stat"><b>20</b><span>read from maker templates</span></div>
+      <div class="stat"><b>6</b><span>binding families</span></div>
+    </div>
+    <p class="fine">Alpine, AT and tech, NTN, 75 mm telemark, and shift or adapter plates. Every hole is a coordinate in millimetres from a boot reference — the boot toe for sole bindings, the 3-pin line for 75 mm telemark — so a pattern can be placed for any boot length. <a href="patterns.html">Browse the whole library</a>.</p>
+    <div class="cols">
+      <div class="section">
+        <h3>Where the numbers come from</h3>
+        <p class="fine">Most were read out of the vector geometry of maker and shop templates rather than copied from a table: hole circles, boot-edge lines and heel adjustment ranges, measured directly in the PDF. Each entry carries what it was measured from and how well the sources agree.</p>
+      </div>
+      <div class="section">
+        <h3>Where sources disagree</h3>
+        <p class="fine">They do, by a few millimetres, and the library says so instead of picking silently. Sliding heels vary the most between sources — often that is the binding's own adjustment range, not an error.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Sources</h2>
+    <ul class="fine">
+      <li>Voilé 4-hole and 3-hole telemark templates — <a href="https://www.voile.com/" rel="noopener">voile.com</a></li>
+      <li>22 Designs printable template — <a href="https://twentytwodesigns.com/pages/printable-template-info" rel="noopener">twentytwodesigns.com</a></li>
+      <li>Bishop Bindings BMF template — <a href="https://bishopbindings.com/" rel="noopener">bishopbindings.com</a></li>
+      <li>Powderguide binding templates by Knut Pohl, mirrored by <a href="https://slidewright.com/powderguide-ski-binding-templates/" rel="noopener">SlideWright</a></li>
+      <li>SlideWright template strips — <a href="https://slidewright.com/" rel="noopener">slidewright.com</a></li>
+      <li>EarnYourTurns telemark mounting patterns — <a href="https://earnyourturns.com/34683/telemark-binding-mounting-patterns/" rel="noopener">earnyourturns.com</a></li>
+      <li>Insert hardware and the Jigarex plate list — <a href="https://www.bindingfreedom.com/" rel="noopener">Binding Freedom</a></li>
+      <li><a href="https://github.com/tomahawkins/binding-templates" rel="noopener">tomahawkins/binding-templates</a> for cross-checking</li>
+    </ul>
+    <p class="tiny">Trademarks belong to their owners. This site is not affiliated with any binding maker, and hosts no one else's template files — only measurements taken from published ones.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="warn">Test-mount before you drill</h2>
+    <p class="fine warn">These are planning numbers, not a jig. Print at actual size, check the 100 mm bar, tape the template down and offer the binding up to it before a bit touches the ski. Drilling is permanent; a wrong pattern is a ruined topsheet at best.</p>
+  </section>
+
+  <footer>
+    <p class="tiny">Built for the shop bench. Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  </footer>
+</main>
+</body>
+</html>
