@@ -6,7 +6,7 @@ The published site: **https://iqis.github.io/ski-mount/**
   spacing, print a 1:1 mounting template.
 - **Shift Ruler** — a printable paper rule for moving a mount off the ski's recommended boot
   centre.
-- **Hole patterns** — 116 binding patterns, each hole a coordinate in millimetres from a boot
+- **Hole patterns** — 118 binding patterns, each hole a coordinate in millimetres from a boot
   reference, with the template it was measured from.
 
 Everything runs in the browser; nothing is uploaded. These pages are generated — the tools and the

@@ -119,6 +119,9 @@
   details { font-size: 13px; }
   summary { cursor: pointer; color: var(--ink-2); }
   details pre { font-family: var(--mono); font-size: 12px; background: var(--mat); border-radius: 8px; padding: 10px 12px; overflow-x: auto; margin: 8px 0 0; color: var(--ink-2); }
+  .shared { display: grid; gap: 4px; }
+  .shared .label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .shared ul { margin: 0; padding-left: 1.1em; display: grid; gap: 3px; font-size: 13.5px; color: var(--ink-2); }
   .sources { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
   .sources .label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-right: 2px; }
   .src-link { display: inline-flex; align-items: baseline; gap: 6px; font-size: 12.5px; text-decoration: none;
@@ -159,7 +162,7 @@
     <div class="kicker">Ski binding mounting</div>
     <h1>Hole patterns</h1>
     <p class="lede">Every hole is a coordinate in millimetres, measured from a boot reference: the boot toe for sole bindings, the 3-pin line for 75 mm telemark, the mount line for plates. Positive is toward the tip.</p>
-    <p class="fine">63 of the 116 are marked <b>shape only</b>: the source shows the hole spacing but not where the pattern sits relative to the boot, so those are drawn without a reference line — set the position yourself in the designer.</p>
+    <p class="fine">63 of the 118 are marked <b>shape only</b>: the source shows the hole spacing but not where the pattern sits relative to the boot, so those are drawn without a reference line — set the position yourself in the designer.</p>
     <p class="fine">Part of <a href="index.html">Ski Mount</a> — use these in the <a href="designer.html">Mount Hole Designer</a> to lay out inserts and print a 1:1 template.</p>
   </header>
 
@@ -168,7 +171,7 @@
       <input id="q" type="search" placeholder="Search a binding, a ski, a model — Switchback, Shift, Kingpin, Axl…" aria-label="Search patterns" autocomplete="off">
       <output class="count" id="count"></output>
     </div>
-    <div class="filters" id="filters" role="group" aria-label="Filter by binding type"><button class="filter" type="button" data-cat="all" aria-pressed="true">All <span>116</span></button><button class="filter" type="button" data-cat="tele75" aria-pressed="false">75 mm telemark <span>6</span></button><button class="filter" type="button" data-cat="ntn" aria-pressed="false">NTN telemark <span>8</span></button><button class="filter" type="button" data-cat="tech" aria-pressed="false">Tech / pin <span>72</span></button><button class="filter" type="button" data-cat="at" aria-pressed="false">AT / frame <span>7</span></button><button class="filter" type="button" data-cat="alpine" aria-pressed="false">Alpine <span>12</span></button><button class="filter" type="button" data-cat="plate" aria-pressed="false">Plate <span>11</span></button></div>
+    <div class="filters" id="filters" role="group" aria-label="Filter by binding type"><button class="filter" type="button" data-cat="all" aria-pressed="true">All <span>118</span></button><button class="filter" type="button" data-cat="tele75" aria-pressed="false">75 mm telemark <span>6</span></button><button class="filter" type="button" data-cat="ntn" aria-pressed="false">NTN telemark <span>10</span></button><button class="filter" type="button" data-cat="tech" aria-pressed="false">Tech / pin <span>72</span></button><button class="filter" type="button" data-cat="at" aria-pressed="false">AT / frame <span>7</span></button><button class="filter" type="button" data-cat="alpine" aria-pressed="false">Alpine <span>12</span></button><button class="filter" type="button" data-cat="plate" aria-pressed="false">Plate <span>11</span></button></div>
   </div>
 
   <div id="list" class="page" style="gap: 14px">
@@ -180,14 +183,15 @@
   </header>
   <div class="chips"><span class="chip cat">75 mm telemark</span><span class="chip warn">conflict</span><span class="chip">placed by heel-to-pin length</span></div>
   <div class="pat-body">
-    <figure class="fig-wrap"><svg class="fig" viewBox="-28.7 -37.0 124.2 88.1" preserveAspectRatio="xMidYMid meet" role="img" aria-label="22 Designs 6-hole, Vice / HammerHead pin line: toe"><rect class="ski" x="-28.7" y="-34.0" width="124.2" height="68.1" rx="5"/><line class="centre" x1="-28.7" y1="0" x2="95.5" y2="0"/><text class="dir" x="-26.2" y="-28.0">TIP</text><line class="ref" x1="0" y1="-34.0" x2="0" y2="34.0"/><text class="reflabel" x="2.5" y="-28.0">3-PIN LINE</text><g class="hole"><circle cx="-4.71" cy="-19.05" r="3.92"/><line x1="-10.63" y1="-19.05" x2="1.21" y2="-19.05"/><line x1="-4.71" y1="-24.98" x2="-4.71" y2="-13.12"/></g><g class="hole"><circle cx="-4.71" cy="19.05" r="3.92"/><line x1="-10.63" y1="19.05" x2="1.21" y2="19.05"/><line x1="-4.71" y1="13.12" x2="-4.71" y2="24.98"/></g><g class="hole"><circle cx="33.39" cy="-19.05" r="3.92"/><line x1="27.46" y1="-19.05" x2="39.31" y2="-19.05"/><line x1="33.39" y1="-24.98" x2="33.39" y2="-13.12"/></g><g class="hole"><circle cx="33.39" cy="19.05" r="3.92"/><line x1="27.46" y1="19.05" x2="39.31" y2="19.05"/><line x1="33.39" y1="13.12" x2="33.39" y2="24.98"/></g><g class="hole"><circle cx="71.49" cy="-19.05" r="3.92"/><line x1="65.56" y1="-19.05" x2="77.41" y2="-19.05"/><line x1="71.49" y1="-24.98" x2="71.49" y2="-13.12"/></g><g class="hole"><circle cx="71.49" cy="19.05" r="3.92"/><line x1="65.56" y1="19.05" x2="77.41" y2="19.05"/><line x1="71.49" y1="13.12" x2="71.49" y2="24.98"/></g><g class="bar"><line x1="-26.2" y1="45.0" x2="23.8" y2="45.0"/><line x1="-26.2" y1="42.5" x2="-26.2" y2="47.5"/><line x1="23.8" y1="42.5" x2="23.8" y2="47.5"/><line x1="-1.2" y1="43.4" x2="-1.2" y2="46.6"/><text x="26.8" y="47.0">50 mm</text></g></svg><figcaption>toe holes, drawn to scale</figcaption></figure>
+    <figure class="fig-wrap"><svg class="fig" viewBox="-28.7 -37.0 124.2 88.1" preserveAspectRatio="xMidYMid meet" role="img" aria-label="22 Designs 6-hole, Vice / HammerHead pin line: toe"><rect class="ski" x="-28.7" y="-34.0" width="124.2" height="68.1" rx="5"/><line class="centre" x1="-28.7" y1="0" x2="95.5" y2="0"/><text class="dir" x="-26.2" y="-28.0">TIP</text><line class="ref" x1="0" y1="-34.0" x2="0" y2="34.0"/><text class="reflabel" x="2.5" y="-28.0">3-PIN LINE</text><g class="hole"><circle cx="-4.70" cy="-19.05" r="3.92"/><line x1="-10.62" y1="-19.05" x2="1.22" y2="-19.05"/><line x1="-4.70" y1="-24.98" x2="-4.70" y2="-13.12"/></g><g class="hole"><circle cx="-4.70" cy="19.05" r="3.92"/><line x1="-10.62" y1="19.05" x2="1.22" y2="19.05"/><line x1="-4.70" y1="13.12" x2="-4.70" y2="24.98"/></g><g class="hole"><circle cx="33.40" cy="-19.05" r="3.92"/><line x1="27.47" y1="-19.05" x2="39.32" y2="-19.05"/><line x1="33.40" y1="-24.98" x2="33.40" y2="-13.12"/></g><g class="hole"><circle cx="33.40" cy="19.05" r="3.92"/><line x1="27.47" y1="19.05" x2="39.32" y2="19.05"/><line x1="33.40" y1="13.12" x2="33.40" y2="24.98"/></g><g class="hole"><circle cx="71.50" cy="-19.05" r="3.92"/><line x1="65.58" y1="-19.05" x2="77.42" y2="-19.05"/><line x1="71.50" y1="-24.98" x2="71.50" y2="-13.12"/></g><g class="hole"><circle cx="71.50" cy="19.05" r="3.92"/><line x1="65.58" y1="19.05" x2="77.42" y2="19.05"/><line x1="71.50" y1="13.12" x2="71.50" y2="24.98"/></g><g class="bar"><line x1="-26.2" y1="45.0" x2="23.8" y2="45.0"/><line x1="-26.2" y1="42.5" x2="-26.2" y2="47.5"/><line x1="23.8" y1="42.5" x2="23.8" y2="47.5"/><line x1="-1.2" y1="43.4" x2="-1.2" y2="46.6"/><text x="26.8" y="47.0">50 mm</text></g></svg><figcaption>toe holes, drawn to scale</figcaption></figure>
     <div class="pat-data">
       <div class="wrap"><table class="parts">
         <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup>
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
-        <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">6</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr></tbody>
+        <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">6</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr><tr><td>heel climber</td><td>back of boot heel</td><td class="n">2</td><td class="n">38.1</td><td class="n">0.0</td><td>Double Up Heel climber: 32 mm for Axl and Outlaw X, 25 mm for Vice and Lynx, same 2 holes; placed from the back of the boot heel.; placed anywhere within ±15 mm</td></tr></tbody>
       </table></div>
-      <p class="fine">22 Designs template: front row 4.71 ahead of the Vice pin line. EarnYourTurns draws 3 for HH/Vice/Outlaw/Lynx. 22 Designs’ FAQ puts Axl 5/16 in behind the others.</p>
+      <p class="fine">22 Designs template: front row 4.7 ahead of the Vice pin line. EarnYourTurns draws 3 for HH/Vice/Outlaw/Lynx. 22 Designs’ template scale is heel-to-pin-line length in cm for Axl/Vice and full sole length for NTN, not mondo (“MEASURE BOOT from heel to toe (pin line for Axl/Vice) in cm. DO NOT USE MONDO SIZE”); boot center mark = reference line + L/2.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-22d-axl">22D Axl</a>: all 8 holes · same boot, heel climber 4.9 mm off its mark · 22D Vice/HH pin line 4.9 mm ahead of the 22D Axl pin line</li><li>On <a href="#p-inwild-simpll">InWild SIMPLL</a>: 6 fixed holes, 2 new for the heel climber, 2 of its holes unused · any boot · 22D Vice/HH pin line 1.3 mm ahead of the InWild SIMPLL boot toe</li><li>On <a href="#p-inwild-simpll-combo">InWild SIMPLL Combo</a>: 6 fixed holes, 2 new for the heel climber, 4 of its holes unused · any boot · 22D Vice/HH pin line 1.3 mm ahead of the InWild SIMPLL Combo boot toe</li><li>Same holes as <a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: all 8 holes · same boot · 22D Vice/HH pin line on the 22D Outlaw/Lynx boot toe</li><li>On <a href="#p-22d-bandit">22D Bandit</a>: 6 fixed holes, 2 new for the heel climber · any boot · 22D Vice/HH pin line 13.0 mm behind the 22D Bandit boot toe</li><li>On <a href="#p-bishop-bmf-ntn">BMF NTN</a>: all 8 holes, 1 of its holes unused · 22D Vice/HH heel-to-pin 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Vice/HH pin line 29.7 mm behind the BMF NTN boot toe</li><li>On <a href="#p-bishop-bmf-75">BMF 75</a>: all 8 holes, 1 of its holes unused · 22D Vice/HH heel-to-pin 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Vice/HH pin line 29.7 mm behind the BMF 75 pin line</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 2 here unused · any boot · 22D Bandit boot toe 13.0 mm ahead of the 22D Vice/HH pin line</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the 3-pin line
    along    across
    -71.5    -19.1
@@ -195,7 +199,11 @@
    -33.4    -19.1
    -33.4     19.1
      4.7    -19.1
-     4.7     19.1</pre></details>
+     4.7     19.1
+heel climber — from the back of boot heel
+   along    across
+    25.5      0.0
+    63.7      0.0</pre></details>
       <div class="pat-actions">
         <a class="btn" href="designer.html#add=22d-vice">Open in the designer</a>
         <button class="btn ghost" type="button" data-copy="22d-vice">Copy coordinates</button>
@@ -214,22 +222,23 @@
   </header>
   <div class="chips"><span class="chip cat">75 mm telemark</span><span class="chip warn">conflict</span><span class="chip">Jigarex 22 Designs Axl</span><span class="chip">placed by heel-to-pin length</span></div>
   <div class="pat-body">
-    <figure class="fig-wrap"><svg class="fig" viewBox="-33.8 -37.0 124.2 88.1" preserveAspectRatio="xMidYMid meet" role="img" aria-label="22 Designs Axl (6-hole toe + Double Up Heel climber): toe"><rect class="ski" x="-33.8" y="-34.0" width="124.2" height="68.1" rx="5"/><line class="centre" x1="-33.8" y1="0" x2="90.4" y2="0"/><text class="dir" x="-31.3" y="-28.0">TIP</text><line class="ref" x1="0" y1="-34.0" x2="0" y2="34.0"/><text class="reflabel" x="2.5" y="-28.0">3-PIN LINE</text><g class="hole"><circle cx="-9.83" cy="-19.05" r="3.92"/><line x1="-15.75" y1="-19.05" x2="-3.91" y2="-19.05"/><line x1="-9.83" y1="-24.98" x2="-9.83" y2="-13.12"/></g><g class="hole"><circle cx="-9.83" cy="19.05" r="3.92"/><line x1="-15.75" y1="19.05" x2="-3.91" y2="19.05"/><line x1="-9.83" y1="13.12" x2="-9.83" y2="24.98"/></g><g class="hole"><circle cx="28.27" cy="-19.05" r="3.92"/><line x1="22.34" y1="-19.05" x2="34.20" y2="-19.05"/><line x1="28.27" y1="-24.98" x2="28.27" y2="-13.12"/></g><g class="hole"><circle cx="28.27" cy="19.05" r="3.92"/><line x1="22.34" y1="19.05" x2="34.20" y2="19.05"/><line x1="28.27" y1="13.12" x2="28.27" y2="24.98"/></g><g class="hole"><circle cx="66.37" cy="-19.05" r="3.92"/><line x1="60.45" y1="-19.05" x2="72.30" y2="-19.05"/><line x1="66.37" y1="-24.98" x2="66.37" y2="-13.12"/></g><g class="hole"><circle cx="66.37" cy="19.05" r="3.92"/><line x1="60.45" y1="19.05" x2="72.30" y2="19.05"/><line x1="66.37" y1="13.12" x2="66.37" y2="24.98"/></g><g class="bar"><line x1="-31.3" y1="45.0" x2="18.7" y2="45.0"/><line x1="-31.3" y1="42.5" x2="-31.3" y2="47.5"/><line x1="18.7" y1="42.5" x2="18.7" y2="47.5"/><line x1="-6.3" y1="43.4" x2="-6.3" y2="46.6"/><text x="21.7" y="47.0">50 mm</text></g></svg><figcaption>toe holes, drawn to scale</figcaption></figure>
+    <figure class="fig-wrap"><svg class="fig" viewBox="-33.6 -37.0 124.2 88.1" preserveAspectRatio="xMidYMid meet" role="img" aria-label="22 Designs Axl (6-hole toe + Double Up Heel climber): toe"><rect class="ski" x="-33.6" y="-34.0" width="124.2" height="68.1" rx="5"/><line class="centre" x1="-33.6" y1="0" x2="90.6" y2="0"/><text class="dir" x="-31.1" y="-28.0">TIP</text><line class="ref" x1="0" y1="-34.0" x2="0" y2="34.0"/><text class="reflabel" x="2.5" y="-28.0">3-PIN LINE</text><g class="hole"><circle cx="-9.64" cy="-19.05" r="3.92"/><line x1="-15.57" y1="-19.05" x2="-3.72" y2="-19.05"/><line x1="-9.64" y1="-24.98" x2="-9.64" y2="-13.12"/></g><g class="hole"><circle cx="-9.64" cy="19.05" r="3.92"/><line x1="-15.57" y1="19.05" x2="-3.72" y2="19.05"/><line x1="-9.64" y1="13.12" x2="-9.64" y2="24.98"/></g><g class="hole"><circle cx="28.46" cy="-19.05" r="3.92"/><line x1="22.54" y1="-19.05" x2="34.38" y2="-19.05"/><line x1="28.46" y1="-24.98" x2="28.46" y2="-13.12"/></g><g class="hole"><circle cx="28.46" cy="19.05" r="3.92"/><line x1="22.54" y1="19.05" x2="34.38" y2="19.05"/><line x1="28.46" y1="13.12" x2="28.46" y2="24.98"/></g><g class="hole"><circle cx="66.56" cy="-19.05" r="3.92"/><line x1="60.64" y1="-19.05" x2="72.48" y2="-19.05"/><line x1="66.56" y1="-24.98" x2="66.56" y2="-13.12"/></g><g class="hole"><circle cx="66.56" cy="19.05" r="3.92"/><line x1="60.64" y1="19.05" x2="72.48" y2="19.05"/><line x1="66.56" y1="13.12" x2="66.56" y2="24.98"/></g><g class="bar"><line x1="-31.1" y1="45.0" x2="18.9" y2="45.0"/><line x1="-31.1" y1="42.5" x2="-31.1" y2="47.5"/><line x1="18.9" y1="42.5" x2="18.9" y2="47.5"/><line x1="-6.1" y1="43.4" x2="-6.1" y2="46.6"/><text x="21.9" y="47.0">50 mm</text></g></svg><figcaption>toe holes, drawn to scale</figcaption></figure>
     <div class="pat-data">
       <div class="wrap"><table class="parts">
         <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup>
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">6</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr><tr><td>heel climber</td><td>back of boot heel</td><td class="n">2</td><td class="n">38.1</td><td class="n">0.0</td><td>Double Up Heel climber, 2 centerline holes 1-1/2 in apart. Size Small with a boot under 28.0 cm: place it as for 28.0 cm; placed anywhere within ±15 mm</td></tr></tbody>
       </table></div>
-      <p class="fine">1-1/2 in grid. Toe: 22 Designs template puts the front row 9.83 ahead of the Axl pin line; EarnYourTurns draws 11 — measure the binding. Heel climber (22 Designs poster + template): mark the back of the boot heel at boot center + sole length/2, align the template’s ‘Back of Boot Heel’ line there, punch the 2 rear dots — 63.7 and 25.5 mm ahead of the back of the heel. Boot center marks on the template = Axl pin line + heel-to-pin/2.</p>
+      <p class="fine">1-1/2 in grid. Toe: 22 Designs template puts the front row 9.6 ahead of the Axl pin line (4.9 behind the Vice pin line; 22 Designs’ FAQ says 5/16 in); EarnYourTurns draws 11 — measure the binding. Heel climber (22 Designs poster + template): mark the back of the boot heel at boot center + L/2, align the template’s ‘Back of Boot Heel’ line there, punch the 2 rear dots — 63.7 and 25.5 mm ahead of the back of the heel. 22 Designs’ template scale is heel-to-pin-line length in cm for Axl/Vice and full sole length for NTN, not mondo (“MEASURE BOOT from heel to toe (pin line for Axl/Vice) in cm. DO NOT USE MONDO SIZE”); boot center mark = reference line + L/2.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-22d-vice">22D Vice/HH</a>: all 8 holes · same boot, heel climber 4.9 mm off its mark · 22D Axl pin line 4.9 mm behind the 22D Vice/HH pin line</li><li>On <a href="#p-inwild-simpll">InWild SIMPLL</a>: 6 fixed holes, 2 new for the heel climber, 2 of its holes unused · any boot · 22D Axl pin line 3.6 mm behind the InWild SIMPLL boot toe</li><li>On <a href="#p-inwild-simpll-combo">InWild SIMPLL Combo</a>: 6 fixed holes, 2 new for the heel climber, 4 of its holes unused · any boot · 22D Axl pin line 3.6 mm behind the InWild SIMPLL Combo boot toe</li><li>Same holes as <a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: all 8 holes · same boot, heel climber 4.9 mm off its mark · 22D Axl pin line 4.9 mm behind the 22D Outlaw/Lynx boot toe</li><li>On <a href="#p-22d-bandit">22D Bandit</a>: 6 fixed holes, 2 new for the heel climber · any boot · 22D Axl pin line 18.0 mm behind the 22D Bandit boot toe</li><li>On <a href="#p-bishop-bmf-ntn">BMF NTN</a>: all 8 holes, 1 of its holes unused · 22D Axl heel-to-pin 271.2 (256.2–286.2 with the heel climber off its mark) · 22D Axl pin line 34.6 mm behind the BMF NTN boot toe</li><li>On <a href="#p-bishop-bmf-75">BMF 75</a>: all 8 holes, 1 of its holes unused · 22D Axl heel-to-pin 271.2 (256.2–286.2 with the heel climber off its mark) · 22D Axl pin line 34.6 mm behind the BMF 75 pin line</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 2 here unused · any boot · 22D Bandit boot toe 18.0 mm ahead of the 22D Axl pin line</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the 3-pin line
    along    across
-   -66.4    -19.1
-   -66.4     19.1
-   -28.3    -19.1
-   -28.3     19.1
-     9.8    -19.1
-     9.8     19.1
+   -66.6    -19.1
+   -66.6     19.1
+   -28.5    -19.1
+   -28.5     19.1
+     9.6    -19.1
+     9.6     19.1
 heel climber — from the back of boot heel
    along    across
     25.5      0.0
@@ -259,7 +268,8 @@ heel climber — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">7</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr><tr><td>heel bracket</td><td>3-pin line</td><td class="n">2</td><td class="n">38.1</td><td class="n">0.0</td><td>fixed position, measured from the same front line — must not move</td></tr></tbody>
       </table></div>
-      <p class="fine">Bishop’s template draws one line for both toe cages: NTN front of boot = 75 mm pin line. 1-1/2 in grid, rows 25.0 / 63.1 / 101.2 behind that line (the last row has a center hole), heel bracket holes 242.2 and 280.3 behind it on the centerline, fixed for every boot size. 75 mm boots: use total sole length − 10 mm as BSL. EarnYourTurns and the Lean library agree on the toe within 0.2 mm; Lean’s heel is 1.8 mm further back. Same holes as a 22D Axl: all six toe holes shared puts the BMF line 34.8 mm ahead of the Axl pin line (EarnYourTurns: 36.0); sharing the Axl’s rear four puts it 3.3 mm behind (2.1).</p>
+      <p class="fine">Bishop’s template draws one line for both toe cages: NTN front of boot = 75 mm pin line. 1-1/2 in grid, rows 25.0 / 63.1 / 101.2 behind that line (the last row has a center hole), heel bracket holes 242.2 and 280.3 behind it on the centerline, fixed for every boot size. 75 mm boots: use total sole length − 10 mm as BSL. EarnYourTurns and the Lean library agree on the toe within 0.2 mm; Lean’s heel is 1.8 mm further back. Same holes as a 22D Axl: all six toe holes shared puts the BMF line 34.6 mm ahead of the Axl pin line (EarnYourTurns: 36.0); sharing the Axl’s rear four puts it 3.5 mm behind (2.1).</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-bishop-bmf-ntn">BMF NTN</a>: all 9 holes · any boot · BMF 75 pin line on the BMF NTN boot toe</li><li><a href="#p-22d-axl">22D Axl</a>: all 8 of its holes here, 1 here unused — a Jigarex 22 Designs Axl plate drills them · 22D Axl heel-to-pin 271.2 (256.2–286.2 with the heel climber off its mark) · 22D Axl pin line 34.6 mm behind the BMF 75 pin line</li><li><a href="#p-22d-vice">22D Vice/HH</a>: all 8 of its holes here, 1 here unused · 22D Vice/HH heel-to-pin 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Vice/HH pin line 29.7 mm behind the BMF 75 pin line</li><li><a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: all 8 of its holes here, 1 here unused · 22D Outlaw/Lynx BSL 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Outlaw/Lynx boot toe 29.7 mm behind the BMF 75 pin line</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 3 here unused · any boot · 22D Bandit boot toe 16.7 mm behind the BMF 75 pin line</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the 3-pin line
    along    across
   -101.2    -19.1
@@ -299,6 +309,7 @@ heel bracket — from the 3-pin line
         <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">3</td><td class="n">63.9</td><td class="n">26.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Older 3-pin toe pattern.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the 3-pin line
    along    across
    -39.9    -13.0
@@ -330,6 +341,7 @@ heel bracket — from the 3-pin line
         <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">4</td><td class="n">111.9</td><td class="n">26.0</td><td></td></tr><tr><td>heel pad</td><td>back of boot heel</td><td class="n">2</td><td class="n">26.9</td><td class="n">0.0</td><td>Switchback heel pad; slotted for small trims; placed anywhere within ±15 mm</td></tr></tbody>
       </table></div>
       <p class="fine">Voilé template: 26 × 111.9, front row 40.1 ahead of the 3-pin line. EarnYourTurns’ generic Targa template draws 111.2 (0.7 shorter).</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>On <a href="#p-voile-6">Voilé 6-hole</a>: 4 fixed holes, 2 new for the heel pad, 2 of its holes unused · any boot · Voilé 4-hole pin line 0.3 mm ahead of the Voilé 6-hole pin line</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the 3-pin line
    along    across
    -71.8    -13.0
@@ -366,6 +378,7 @@ heel pad — from the back of boot heel
         <tbody><tr><td>toe</td><td>3-pin line</td><td class="n">6</td><td class="n">111.2</td><td class="n">26.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Standard 4-hole plus a pair 73 mm behind the front row.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li><a href="#p-voile-4">Voilé 4-hole</a>: its 4 fixed holes here, 2 new for the heel pad, 2 here unused — a Jigarex Telemark 4 Hole Standard plate drills them · any boot · Voilé 4-hole pin line 0.3 mm ahead of the Voilé 6-hole pin line</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the 3-pin line
    along    across
    -71.1    -13.0
@@ -385,7 +398,81 @@ heel pad — from the back of boot heel
     </div>
   </div>
 </article>
-<h2 class="group-head" data-cat="ntn">NTN telemark<span>8</span></h2>
+<h2 class="group-head" data-cat="ntn">NTN telemark<span>10</span></h2>
+<article class="pat" id="p-22d-bandit" data-cat="ntn" data-key="22d-bandit" data-search="22 designs bandit (ntn) bandit ntn telemark 22d-bandit single-source">
+  <header>
+    <h2><a class="anchor" href="#p-22d-bandit" aria-label="Link to 22 Designs Bandit (NTN)">22 Designs Bandit (NTN)</a></h2>
+    <p class="models">Bandit</p>
+  </header>
+  <div class="chips"><span class="chip cat">NTN telemark</span><span class="chip ">single-source</span><span class="chip">placed by BSL</span></div>
+  <div class="pat-body">
+    <figure class="fig-wrap"><svg class="fig" viewBox="-24.0 -37.0 132.6 88.1" preserveAspectRatio="xMidYMid meet" role="img" aria-label="22 Designs Bandit (NTN): toe"><rect class="ski" x="-24.0" y="-34.0" width="132.6" height="68.1" rx="5"/><line class="centre" x1="-24.0" y1="0" x2="108.5" y2="0"/><text class="dir" x="-21.5" y="-28.0">TIP</text><line class="ref" x1="0" y1="-34.0" x2="0" y2="34.0"/><text class="reflabel" x="2.5" y="-28.0">BOOT TOE</text><g class="hole"><circle cx="8.35" cy="-19.05" r="3.92"/><line x1="2.42" y1="-19.05" x2="14.27" y2="-19.05"/><line x1="8.35" y1="-24.98" x2="8.35" y2="-13.12"/></g><g class="hole"><circle cx="8.35" cy="19.05" r="3.92"/><line x1="2.42" y1="19.05" x2="14.27" y2="19.05"/><line x1="8.35" y1="13.12" x2="8.35" y2="24.98"/></g><g class="hole"><circle cx="46.45" cy="-19.05" r="3.92"/><line x1="40.53" y1="-19.05" x2="52.38" y2="-19.05"/><line x1="46.45" y1="-24.98" x2="46.45" y2="-13.12"/></g><g class="hole"><circle cx="46.45" cy="19.05" r="3.92"/><line x1="40.53" y1="19.05" x2="52.38" y2="19.05"/><line x1="46.45" y1="13.12" x2="46.45" y2="24.98"/></g><g class="hole"><circle cx="84.55" cy="-19.05" r="3.92"/><line x1="78.62" y1="-19.05" x2="90.47" y2="-19.05"/><line x1="84.55" y1="-24.98" x2="84.55" y2="-13.12"/></g><g class="hole"><circle cx="84.55" cy="19.05" r="3.92"/><line x1="78.62" y1="19.05" x2="90.47" y2="19.05"/><line x1="84.55" y1="13.12" x2="84.55" y2="24.98"/></g><g class="bar"><line x1="-21.5" y1="45.0" x2="28.5" y2="45.0"/><line x1="-21.5" y1="42.5" x2="-21.5" y2="47.5"/><line x1="28.5" y1="42.5" x2="28.5" y2="47.5"/><line x1="3.5" y1="43.4" x2="3.5" y2="46.6"/><text x="31.5" y="47.0">50 mm</text></g></svg><figcaption>toe holes, drawn to scale</figcaption></figure>
+    <div class="pat-data">
+      <div class="wrap"><table class="parts">
+        <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup>
+        <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
+        <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr></tbody>
+      </table></div>
+      <p class="fine">22 Designs template: front row 8.35 behind the front of the boot — the Bandit’s line is 13.05 ahead of the Outlaw/Lynx line, which matches the product copy (“puts the boot 1.3cm ahead of the Outlaw or Lynx”). No heel piece published (brakes). 22 Designs’ template scale is heel-to-pin-line length in cm for Axl/Vice and full sole length for NTN, not mondo (“MEASURE BOOT from heel to toe (pin line for Axl/Vice) in cm. DO NOT USE MONDO SIZE”); boot center mark = reference line + L/2.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>On <a href="#p-22d-axl">22D Axl</a>: all 6 holes, 2 of its holes unused · any boot · 22D Bandit boot toe 18.0 mm ahead of the 22D Axl pin line</li><li>On <a href="#p-22d-vice">22D Vice/HH</a>: all 6 holes, 2 of its holes unused · any boot · 22D Bandit boot toe 13.0 mm ahead of the 22D Vice/HH pin line</li><li>On <a href="#p-inwild-simpll">InWild SIMPLL</a>: all 6 holes, 2 of its holes unused · any boot · 22D Bandit boot toe 14.4 mm ahead of the InWild SIMPLL boot toe</li><li>On <a href="#p-inwild-simpll-combo">InWild SIMPLL Combo</a>: all 6 holes, 4 of its holes unused · any boot · 22D Bandit boot toe 14.4 mm ahead of the InWild SIMPLL Combo boot toe</li><li>On <a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: all 6 holes, 2 of its holes unused · any boot · 22D Bandit boot toe 13.0 mm ahead of the 22D Outlaw/Lynx boot toe</li><li>On <a href="#p-bishop-bmf-ntn">BMF NTN</a>: all 6 holes, 3 of its holes unused · any boot · 22D Bandit boot toe 16.7 mm behind the BMF NTN boot toe</li><li>On <a href="#p-bishop-bmf-75">BMF 75</a>: all 6 holes, 3 of its holes unused · any boot · 22D Bandit boot toe 16.7 mm behind the BMF 75 pin line</li><li><a href="#p-22d-axl">22D Axl</a>: its 6 fixed holes here, 2 new for the heel climber — a Jigarex 22 Designs Axl plate drills them · any boot · 22D Axl pin line 18.0 mm behind the 22D Bandit boot toe</li><li><a href="#p-22d-vice">22D Vice/HH</a>: its 6 fixed holes here, 2 new for the heel climber · any boot · 22D Vice/HH pin line 13.0 mm behind the 22D Bandit boot toe</li><li><a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: its 6 fixed holes here, 2 new for the heel climber · any boot · 22D Outlaw/Lynx boot toe 13.0 mm behind the 22D Bandit boot toe</li></ul></div>
+      <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
+   along    across
+   -84.5    -19.1
+   -84.5     19.1
+   -46.5    -19.1
+   -46.5     19.1
+    -8.3    -19.1
+    -8.3     19.1</pre></details>
+      <div class="pat-actions">
+        <a class="btn" href="designer.html#add=22d-bandit">Open in the designer</a>
+        <button class="btn ghost" type="button" data-copy="22d-bandit">Copy coordinates</button>
+      </div>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.twentytwodesigns.com/pages/printable-template-info" target="_blank" rel="noopener"><span class="src-name">22 Designs paper template</span><span class="src-host">twentytwodesigns.com &#8599;</span></a><a class="src-link" href="https://www.evo.com/products/287501-22-designs-bandit-small-ski-bindings-2027" target="_blank" rel="noopener"><span class="src-name">evo: 22 Designs Bandit (2027)</span><span class="src-host">evo.com &#8599;</span></a>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="pat" id="p-22d-outlaw-lynx" data-cat="ntn" data-key="22d-outlaw-lynx" data-search="22 designs outlaw · outlaw x · lynx (ntn) outlaw · outlaw x · lynx ntn telemark 22d-outlaw-lynx conflict">
+  <header>
+    <h2><a class="anchor" href="#p-22d-outlaw-lynx" aria-label="Link to 22 Designs Outlaw · Outlaw X · Lynx (NTN)">22 Designs Outlaw · Outlaw X · Lynx (NTN)</a></h2>
+    <p class="models">Outlaw · Outlaw X · Lynx</p>
+  </header>
+  <div class="chips"><span class="chip cat">NTN telemark</span><span class="chip warn">conflict</span><span class="chip">placed by BSL</span></div>
+  <div class="pat-body">
+    <figure class="fig-wrap"><svg class="fig" viewBox="-28.7 -37.0 124.2 88.1" preserveAspectRatio="xMidYMid meet" role="img" aria-label="22 Designs Outlaw · Outlaw X · Lynx (NTN): toe"><rect class="ski" x="-28.7" y="-34.0" width="124.2" height="68.1" rx="5"/><line class="centre" x1="-28.7" y1="0" x2="95.5" y2="0"/><text class="dir" x="-26.2" y="-28.0">TIP</text><line class="ref" x1="0" y1="-34.0" x2="0" y2="34.0"/><text class="reflabel" x="2.5" y="-28.0">BOOT TOE</text><g class="hole"><circle cx="-4.70" cy="-19.05" r="3.92"/><line x1="-10.62" y1="-19.05" x2="1.22" y2="-19.05"/><line x1="-4.70" y1="-24.98" x2="-4.70" y2="-13.12"/></g><g class="hole"><circle cx="-4.70" cy="19.05" r="3.92"/><line x1="-10.62" y1="19.05" x2="1.22" y2="19.05"/><line x1="-4.70" y1="13.12" x2="-4.70" y2="24.98"/></g><g class="hole"><circle cx="33.40" cy="-19.05" r="3.92"/><line x1="27.47" y1="-19.05" x2="39.32" y2="-19.05"/><line x1="33.40" y1="-24.98" x2="33.40" y2="-13.12"/></g><g class="hole"><circle cx="33.40" cy="19.05" r="3.92"/><line x1="27.47" y1="19.05" x2="39.32" y2="19.05"/><line x1="33.40" y1="13.12" x2="33.40" y2="24.98"/></g><g class="hole"><circle cx="71.50" cy="-19.05" r="3.92"/><line x1="65.58" y1="-19.05" x2="77.42" y2="-19.05"/><line x1="71.50" y1="-24.98" x2="71.50" y2="-13.12"/></g><g class="hole"><circle cx="71.50" cy="19.05" r="3.92"/><line x1="65.58" y1="19.05" x2="77.42" y2="19.05"/><line x1="71.50" y1="13.12" x2="71.50" y2="24.98"/></g><g class="bar"><line x1="-26.2" y1="45.0" x2="23.8" y2="45.0"/><line x1="-26.2" y1="42.5" x2="-26.2" y2="47.5"/><line x1="23.8" y1="42.5" x2="23.8" y2="47.5"/><line x1="-1.2" y1="43.4" x2="-1.2" y2="46.6"/><text x="26.8" y="47.0">50 mm</text></g></svg><figcaption>toe holes, drawn to scale</figcaption></figure>
+    <div class="pat-data">
+      <div class="wrap"><table class="parts">
+        <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup>
+        <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
+        <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr><tr><td>heel climber</td><td>back of boot heel</td><td class="n">2</td><td class="n">38.1</td><td class="n">0.0</td><td>Double Up Heel climber: 32 mm for Axl and Outlaw X, 25 mm for Vice and Lynx, same 2 holes; placed from the back of the boot heel.; placed anywhere within ±15 mm</td></tr></tbody>
+      </table></div>
+      <p class="fine">Same 6 holes as the Vice. 22 Designs template: front row 4.7 ahead of the front of the boot (Outlaw/Lynx front of boot = Vice pin line); EarnYourTurns draws 3. 22 Designs’ template scale is heel-to-pin-line length in cm for Axl/Vice and full sole length for NTN, not mondo (“MEASURE BOOT from heel to toe (pin line for Axl/Vice) in cm. DO NOT USE MONDO SIZE”); boot center mark = reference line + L/2.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-22d-axl">22D Axl</a>: all 8 holes · same boot, heel climber 4.9 mm off its mark · 22D Outlaw/Lynx boot toe 4.9 mm ahead of the 22D Axl pin line</li><li>Same holes as <a href="#p-22d-vice">22D Vice/HH</a>: all 8 holes · same boot · 22D Outlaw/Lynx boot toe on the 22D Vice/HH pin line</li><li>On <a href="#p-inwild-simpll">InWild SIMPLL</a>: 6 fixed holes, 2 new for the heel climber, 2 of its holes unused · any boot · 22D Outlaw/Lynx boot toe 1.3 mm ahead of the InWild SIMPLL boot toe</li><li>On <a href="#p-inwild-simpll-combo">InWild SIMPLL Combo</a>: 6 fixed holes, 2 new for the heel climber, 4 of its holes unused · any boot · 22D Outlaw/Lynx boot toe 1.3 mm ahead of the InWild SIMPLL Combo boot toe</li><li>On <a href="#p-22d-bandit">22D Bandit</a>: 6 fixed holes, 2 new for the heel climber · any boot · 22D Outlaw/Lynx boot toe 13.0 mm behind the 22D Bandit boot toe</li><li>On <a href="#p-bishop-bmf-ntn">BMF NTN</a>: all 8 holes, 1 of its holes unused · 22D Outlaw/Lynx BSL 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Outlaw/Lynx boot toe 29.7 mm behind the BMF NTN boot toe</li><li>On <a href="#p-bishop-bmf-75">BMF 75</a>: all 8 holes, 1 of its holes unused · 22D Outlaw/Lynx BSL 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Outlaw/Lynx boot toe 29.7 mm behind the BMF 75 pin line</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 2 here unused · any boot · 22D Bandit boot toe 13.0 mm ahead of the 22D Outlaw/Lynx boot toe</li></ul></div>
+      <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
+   along    across
+   -71.5    -19.1
+   -71.5     19.1
+   -33.4    -19.1
+   -33.4     19.1
+     4.7    -19.1
+     4.7     19.1
+heel climber — from the back of boot heel
+   along    across
+    25.5      0.0
+    63.7      0.0</pre></details>
+      <div class="pat-actions">
+        <a class="btn" href="designer.html#add=22d-outlaw-lynx">Open in the designer</a>
+        <button class="btn ghost" type="button" data-copy="22d-outlaw-lynx">Copy coordinates</button>
+      </div>
+      <div class="sources">
+        <span class="label">Measured from</span>
+        <a class="src-link" href="https://www.twentytwodesigns.com/pages/printable-template-info" target="_blank" rel="noopener"><span class="src-name">22 Designs paper template</span><span class="src-host">twentytwodesigns.com &#8599;</span></a><a class="src-link" href="https://earnyourturns.com/wp-content/uploads/2019/08/22D_Outlaw.pdf" target="_blank" rel="noopener"><span class="src-name">EarnYourTurns template: 22D 6-hole (HH, Vice, Outlaw, Lynx)</span><span class="src-host">earnyourturns.com &#8599;</span></a>
+      </div>
+    </div>
+  </div>
+</article>
 <article class="pat" id="p-bishop-bmf-ntn" data-cat="ntn" data-key="bishop-bmf-ntn" data-search="bishop bmf/r · bmf/3 — ntn toe cage measured from the ntn front of boot ntn telemark bishop-bmf-ntn cross-checked">
   <header>
     <h2><a class="anchor" href="#p-bishop-bmf-ntn" aria-label="Link to Bishop BMF/R · BMF/3 — NTN toe cage">Bishop BMF/R · BMF/3 — NTN toe cage</a></h2>
@@ -400,7 +487,8 @@ heel pad — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">7</td><td class="n">76.2</td><td class="n">38.1</td><td></td></tr><tr><td>heel bracket</td><td>boot toe</td><td class="n">2</td><td class="n">38.1</td><td class="n">0.0</td><td>fixed position, measured from the same front line — must not move</td></tr></tbody>
       </table></div>
-      <p class="fine">Bishop’s template draws one line for both toe cages: NTN front of boot = 75 mm pin line. 1-1/2 in grid, rows 25.0 / 63.1 / 101.2 behind that line (the last row has a center hole), heel bracket holes 242.2 and 280.3 behind it on the centerline, fixed for every boot size. 75 mm boots: use total sole length − 10 mm as BSL. EarnYourTurns and the Lean library agree on the toe within 0.2 mm; Lean’s heel is 1.8 mm further back. Same holes as a 22D Axl: all six toe holes shared puts the BMF line 34.8 mm ahead of the Axl pin line (EarnYourTurns: 36.0); sharing the Axl’s rear four puts it 3.3 mm behind (2.1).</p>
+      <p class="fine">Bishop’s template draws one line for both toe cages: NTN front of boot = 75 mm pin line. 1-1/2 in grid, rows 25.0 / 63.1 / 101.2 behind that line (the last row has a center hole), heel bracket holes 242.2 and 280.3 behind it on the centerline, fixed for every boot size. 75 mm boots: use total sole length − 10 mm as BSL. EarnYourTurns and the Lean library agree on the toe within 0.2 mm; Lean’s heel is 1.8 mm further back. Same holes as a 22D Axl: all six toe holes shared puts the BMF line 34.6 mm ahead of the Axl pin line (EarnYourTurns: 36.0); sharing the Axl’s rear four puts it 3.5 mm behind (2.1).</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-bishop-bmf-75">BMF 75</a>: all 9 holes · any boot · BMF NTN boot toe on the BMF 75 pin line</li><li><a href="#p-22d-axl">22D Axl</a>: all 8 of its holes here, 1 here unused — a Jigarex 22 Designs Axl plate drills them · 22D Axl heel-to-pin 271.2 (256.2–286.2 with the heel climber off its mark) · 22D Axl pin line 34.6 mm behind the BMF NTN boot toe</li><li><a href="#p-22d-vice">22D Vice/HH</a>: all 8 of its holes here, 1 here unused · 22D Vice/HH heel-to-pin 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Vice/HH pin line 29.7 mm behind the BMF NTN boot toe</li><li><a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: all 8 of its holes here, 1 here unused · 22D Outlaw/Lynx BSL 276.2 (261.2–291.2 with the heel climber off its mark) · 22D Outlaw/Lynx boot toe 29.7 mm behind the BMF NTN boot toe</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 3 here unused · any boot · 22D Bandit boot toe 16.7 mm behind the BMF NTN boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
   -101.2    -19.1
@@ -440,6 +528,7 @@ heel bracket — from the boot toe
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">76.0</td><td class="n">38.0</td><td></td></tr><tr><td>rear</td><td>back of boot heel</td><td class="n">2</td><td class="n">0.0</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Measured from the front of the boot. Toe: 38 mm grid, the 22 Designs 6-hole pattern in metric (InWild draws 38.0, 22D 38.1); front row 5.9 ahead of the boot, tech toe pin line 14 behind it. Rear holes 28 wide, the front pair 14 ahead of the back of the heel. InWild: Ø3.6 × 9 mm holes; the template places both halves by BSL (boot center = front + BSL/2 = heel − BSL/2).</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>On <a href="#p-inwild-simpll-combo">InWild SIMPLL Combo</a>: all 8 holes, 2 of its holes unused · same boot · InWild SIMPLL boot toe on the InWild SIMPLL Combo boot toe</li><li><a href="#p-22d-axl">22D Axl</a>: its 6 fixed holes here, 2 new for the heel climber, 2 here unused — a Jigarex 22 Designs Axl plate drills them · any boot · 22D Axl pin line 3.6 mm behind the InWild SIMPLL boot toe</li><li><a href="#p-22d-vice">22D Vice/HH</a>: its 6 fixed holes here, 2 new for the heel climber, 2 here unused · any boot · 22D Vice/HH pin line 1.3 mm ahead of the InWild SIMPLL boot toe</li><li><a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: its 6 fixed holes here, 2 new for the heel climber, 2 here unused · any boot · 22D Outlaw/Lynx boot toe 1.3 mm ahead of the InWild SIMPLL boot toe</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 2 here unused · any boot · 22D Bandit boot toe 14.4 mm ahead of the InWild SIMPLL boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -70.1    -19.0
@@ -478,6 +567,7 @@ rear — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">76.0</td><td class="n">38.0</td><td></td></tr><tr><td>rear</td><td>back of boot heel</td><td class="n">4</td><td class="n">60.0</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Measured from the front of the boot. Toe: 38 mm grid, the 22 Designs 6-hole pattern in metric (InWild draws 38.0, 22D 38.1); front row 5.9 ahead of the boot, tech toe pin line 14 behind it. Rear holes 28 wide, the front pair 14 ahead of the back of the heel. InWild: Ø3.6 × 9 mm holes; the template places both halves by BSL (boot center = front + BSL/2 = heel − BSL/2). Combo adds a second rear pair 46 behind the heel (60 mm rows).</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li><a href="#p-22d-axl">22D Axl</a>: its 6 fixed holes here, 2 new for the heel climber, 4 here unused — a Jigarex 22 Designs Axl plate drills them · any boot · 22D Axl pin line 3.6 mm behind the InWild SIMPLL Combo boot toe</li><li><a href="#p-22d-vice">22D Vice/HH</a>: its 6 fixed holes here, 2 new for the heel climber, 4 here unused · any boot · 22D Vice/HH pin line 1.3 mm ahead of the InWild SIMPLL Combo boot toe</li><li><a href="#p-inwild-simpll">InWild SIMPLL</a>: all 8 of its holes here, 2 here unused · same boot · InWild SIMPLL boot toe on the InWild SIMPLL Combo boot toe</li><li><a href="#p-22d-outlaw-lynx">22D Outlaw/Lynx</a>: its 6 fixed holes here, 2 new for the heel climber, 4 here unused · any boot · 22D Outlaw/Lynx boot toe 1.3 mm ahead of the InWild SIMPLL Combo boot toe</li><li><a href="#p-22d-bandit">22D Bandit</a>: all 6 of its holes here, 4 here unused · any boot · 22D Bandit boot toe 14.4 mm ahead of the InWild SIMPLL Combo boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -70.1    -19.0
@@ -518,6 +608,7 @@ rear — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">8</td><td class="n">90.7</td><td class="n">45.0</td><td></td></tr><tr><td>heel, small</td><td>boot toe</td><td class="n">2</td><td class="n">68.0</td><td class="n">0.0</td><td></td></tr><tr><td>heel, large</td><td>boot toe</td><td class="n">2</td><td class="n">68.1</td><td class="n">0.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Measured from the front of the boot. Use one heel pair.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -84.7     -8.1
@@ -562,6 +653,7 @@ heel, large — from the boot toe
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">8</td><td class="n">90.7</td><td class="n">45.0</td><td></td></tr><tr><td>heel, small</td><td>boot toe</td><td class="n">2</td><td class="n">68.0</td><td class="n">0.0</td><td></td></tr><tr><td>heel, large</td><td>boot toe</td><td class="n">2</td><td class="n">68.1</td><td class="n">0.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Measured from the front of the boot.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -84.7    -22.5
@@ -606,6 +698,7 @@ heel, large — from the boot toe
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">26.5</td><td class="n">30.1</td><td></td></tr><tr><td>pivots</td><td>boot toe</td><td class="n">4</td><td class="n">51.6</td><td class="n">42.1</td><td></td></tr><tr><td>pivots, alt</td><td>boot toe</td><td class="n">4</td><td class="n">51.6</td><td class="n">42.1</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Tech toe 30 × 26.5 at the front of the boot; cable pivot plate in two positions.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -26.9    -15.0
@@ -650,6 +743,7 @@ pivots, alt — from the boot toe
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">95.9</td><td class="n">38.0</td><td></td></tr><tr><td>rear, small</td><td>boot toe</td><td class="n">2</td><td class="n">0.0</td><td class="n">25.0</td><td>small boot sizes</td></tr><tr><td>rear, large</td><td>boot toe</td><td class="n">2</td><td class="n">0.0</td><td class="n">25.0</td><td>large boot sizes</td></tr></tbody>
       </table></div>
       <p class="fine">Measured from the front of the boot. Use one rear pair: small or large.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li><a href="#p-rotte-freeride">NTN Freeride</a>: all 6 of its holes here, 2 here unused — a Jigarex NTN Freeride Pink Plate drills them · any boot · NTN Freeride boot toe on the NTN Freedom boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
   -101.0    -19.0
@@ -692,6 +786,7 @@ rear, large — from the boot toe
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">95.9</td><td class="n">38.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Same six holes as the Freedom front plate.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>On <a href="#p-rotte-freedom">NTN Freedom</a>: all 6 holes, 2 of its holes unused · any boot · NTN Freeride boot toe on the NTN Freedom boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
   -101.0    -19.0
@@ -727,6 +822,7 @@ rear, large — from the boot toe
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -765,6 +861,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -803,6 +900,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -841,6 +939,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -879,6 +978,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">44.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 44, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -44.0    -22.5
@@ -917,6 +1017,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">86.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 86. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -955,6 +1056,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">86.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 25 x 86. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -993,6 +1095,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">75.5</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 60, heel 45 x 75.5. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -60.0    -22.5
@@ -1031,6 +1134,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1069,6 +1173,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">86.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 86. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1107,6 +1212,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">44.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 44, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -44.0    -22.5
@@ -1145,6 +1251,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -1183,6 +1290,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1221,6 +1329,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -1259,6 +1368,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">44.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 44, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -44.0    -22.5
@@ -1297,6 +1407,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -1335,6 +1446,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">34.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 34. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1373,6 +1485,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -1411,6 +1524,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">44.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 44, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -44.0    -22.5
@@ -1449,6 +1563,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">34.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 34. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1487,6 +1602,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">86.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 86. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1525,6 +1641,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">86.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 86. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1563,6 +1680,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -1601,6 +1719,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">44.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 44, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -44.0    -22.5
@@ -1639,6 +1758,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">58.0</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">72.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
       
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -26.0    -21.0
@@ -1676,6 +1796,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">6</td><td class="n">100.5</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">72.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
@@ -1717,6 +1838,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">36.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">70.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/40 x 36, heel 30 x 70. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -36.0    -20.0
@@ -1755,6 +1877,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">36.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">30.0</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/40 x 36, heel 28 x 30. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -36.0    -20.0
@@ -1793,6 +1916,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">39.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">25.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 39, heel 25 x 25. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -39.0    -15.0
@@ -1831,6 +1955,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">39.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">30.0</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 39, heel 28 x 30. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -39.0    -15.0
@@ -1869,6 +1994,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">39.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">25.0</td><td class="n">23.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 39, heel 23 x 25. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -39.0    -15.0
@@ -1907,6 +2033,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">39.8</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">52.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Shapes match skimo.co (30 × 39 toe, 32/36 × 52.5 heel).</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -13.2    -15.0
@@ -1945,6 +2072,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">58.0</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">87.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">skimo.co: 42.5 × 58 toe, 35.5 × 88 heel; template draws 42 and 87.5.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -26.0    -21.0
@@ -1983,6 +2111,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">36.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">70.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/40 x 36, heel 30 x 70. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -36.0    -20.0
@@ -2021,6 +2150,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">58.0</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">52.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">skimo.co lists Radical 2.0’s toe with the Radical heel; positions borrowed from those templates.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -26.0    -21.0
@@ -2059,6 +2189,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">36.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">70.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/40 x 36, heel 30 x 70. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -36.0    -20.0
@@ -2097,6 +2228,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">39.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">38.5</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 39, heel 28 x 38.5. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -39.0    -15.0
@@ -2135,6 +2267,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">39.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">37.0</td><td class="n">23.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 39, heel 23 x 37. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -39.0    -15.0
@@ -2173,6 +2306,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">39.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">52.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 39, heel 32/36 x 52.5. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -39.0    -15.0
@@ -2210,6 +2344,7 @@ heel — from the spacing only
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">39.8</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">28.0</td><td class="n">34.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
@@ -2249,6 +2384,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">5</td><td class="n">44.5</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">52.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">skimo.co: 30 × 26.5 toe with a center hole 19 ahead; the template draws it 18 ahead.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -13.2    -15.0
@@ -2288,6 +2424,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">66.0</td><td class="n">44.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">60.0</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">skimo.co: 44/39.5 × 66 toe, 28.5 × 60.5 heel.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -34.0    -20.0
@@ -2326,6 +2463,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">33.0</td><td class="n">44.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">60.0</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">skimo.co: 44 × 33 toe.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -16.2    -22.0
@@ -2364,6 +2502,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">45.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">52.5</td><td class="n">37.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">skimo.co: 40 × 45 toe, 36.5 × 52.5 heel.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -20.0    -20.0
@@ -2402,6 +2541,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">35.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30/45 x 35, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -35.0    -22.5
@@ -2440,6 +2580,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2478,6 +2619,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">44.0</td><td class="n">45.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 45 x 44, heel 45 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -44.0    -22.5
@@ -2516,6 +2658,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">60.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45/25 x 60. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2554,6 +2697,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">86.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 86. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2592,6 +2736,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">34.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 34. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2630,6 +2775,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">52.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 32/36 x 52.5. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2668,6 +2814,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">25.0</td><td class="n">20.5</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 20.5 x 25. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2706,6 +2853,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">25.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 25. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -2744,6 +2892,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">46.0</td><td class="n">38.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">40.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 38 x 46, heel 36 x 40. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -46.0    -19.0
@@ -2782,6 +2931,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">46.0</td><td class="n">38.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">77.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 38 x 46, heel 36 x 77. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -46.0    -19.0
@@ -2820,6 +2970,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">46.0</td><td class="n">38.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">5</td><td class="n">193.5</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Shape matches skimo.co (38 × 46 toe; 36 × 77 heel, 5th hole ~115 ahead).</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -23.5    -19.0
@@ -2859,6 +3010,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">69.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">53.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 36 x 69, heel 32/36 x 53. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -69.0    -18.0
@@ -2897,6 +3049,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">26.5</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">53.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 26.5, heel 32/36 x 53. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -26.5    -15.0
@@ -2935,6 +3088,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">26.5</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">55.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 26.5, heel 25 x 55. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -26.5    -15.0
@@ -2973,6 +3127,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">26.5</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">55.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 26.5, heel 25 x 55. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -26.5    -15.0
@@ -3011,6 +3166,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">26.5</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">53.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 26.5, heel 32/36 x 53. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -26.5    -15.0
@@ -3049,6 +3205,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">69.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">72.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 36 x 69, heel 36 x 72. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -69.0    -18.0
@@ -3087,6 +3244,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">50.0</td><td class="n">50.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">58.0</td><td class="n">55.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 50 x 50, heel 55 x 58. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -50.0    -25.0
@@ -3125,6 +3283,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">32.0</td><td class="n">32.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">33.5</td><td class="n">28.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 32 x 32, heel 28 x 33.5. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -32.0    -16.0
@@ -3163,6 +3322,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">37.7</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">58.0</td><td class="n">27.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Shape 40 × 38 / 27 × 58 agrees everywhere. SlideWright puts the heel 10 mm further forward — inside the ±10 heel adjustment.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -34.5    -20.0
@@ -3201,6 +3361,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">40.0</td><td class="n">40.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 40 x 40. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -3239,6 +3400,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">31.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 25 x 31. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -3277,6 +3439,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">28.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">5</td><td class="n">122.0</td><td class="n">45.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 36 x 28, heel 45 x 49 (+73). Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -28.0    -18.0
@@ -3316,6 +3479,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">28.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">5</td><td class="n">89.0</td><td class="n">45.5</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 36 x 28, heel 45.5 x 37.5 (+51.5). Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -28.0    -18.0
@@ -3355,6 +3519,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">75.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 36 x 75. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -3393,6 +3558,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">27.0</td><td class="n">30.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">37.5</td><td class="n">45.5</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 30 x 27, heel 45.5 x 37.5. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -27.0    -15.0
@@ -3431,6 +3597,7 @@ heel — from the spacing only
         <tbody><tr><td>toe</td><td>spacing only</td><td class="n">4</td><td class="n">36.0</td><td class="n">41.0</td><td></td></tr><tr><td>heel</td><td>spacing only</td><td class="n">4</td><td class="n">73.0</td><td class="n">36.5</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Toe 41 x 36, heel 36.5 x 73. Positions not published: front rows start at the boot edges; set the shift from a jig or the binding.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the spacing only
    along    across
    -36.0    -20.5
@@ -3470,6 +3637,7 @@ heel — from the spacing only
         <tbody><tr><td>front plate</td><td>boot toe</td><td class="n">4</td><td class="n">68.9</td><td class="n">46.0</td><td></td></tr><tr><td>rear plate</td><td>spacing only</td><td class="n">4</td><td class="n">71.0</td><td class="n">46.0</td><td>position depends on frame size S/L</td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">As Duke, 46 mm wide.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>front plate — from the boot toe
    along    across
    -51.9    -23.0
@@ -3508,6 +3676,7 @@ rear plate — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">46.0</td><td class="n">38.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">80.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Heel shares the Jester pattern.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
     18.0    -19.0
@@ -3546,6 +3715,7 @@ heel — from the back of boot heel
         <tbody><tr><td>front plate</td><td>boot toe</td><td class="n">4</td><td class="n">68.9</td><td class="n">36.0</td><td></td></tr><tr><td>rear plate</td><td>spacing only</td><td class="n">4</td><td class="n">71.0</td><td class="n">36.0</td><td>position depends on frame size S/L</td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Front plate is boot-toe referenced; the rear plate moves with frame size — place by measuring.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>front plate — from the boot toe
    along    across
    -51.9    -18.0
@@ -3584,6 +3754,7 @@ rear plate — from the spacing only
         <tbody><tr><td>front plate</td><td>spacing only</td><td class="n">4</td><td class="n">41.0</td><td class="n">42.0</td><td></td></tr><tr><td>rear plate</td><td>spacing only</td><td class="n">6</td><td class="n">109.0</td><td class="n">40.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine loose-note">The source gives the hole spacing, not where the pattern sits relative to the boot. Use it for spacing and set the position yourself in the designer.</p><p class="fine">Frame binding positioned by the midsole scale; plate positions are not boot-edge referenced in the template. Place by measuring.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>front plate — from the spacing only
    along    across
    -41.0    -21.0
@@ -3624,6 +3795,7 @@ rear plate — from the spacing only
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">5</td><td class="n">135.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">68.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Powderguide and Lean agree on the toe center hole and rear pair; SlideWright draws the toe about 4 mm further forward. Heels agree within 1 mm.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -89.7    -15.0
@@ -3663,6 +3835,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">39.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">65.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Shape agrees with skimo.co (40/36 × 39.5 toe, 32 × 65 heel); one reader measures the toe 39.5, the template draws 39.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -31.0    -18.0
@@ -3701,6 +3874,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">100.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">65.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Demo binding: set at the middle of its range.</p>
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-tyrolia-attack-hybrid">Tyrolia Attack Hybrid</a>: all 8 holes · Tyrolia Tour Demo boot 16.0 mm shorter than Tyrolia Attack Hybrid · Tyrolia Tour Demo boot toe 16.0 mm behind the Tyrolia Attack Hybrid boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -17.0    -18.0
@@ -3740,6 +3914,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">41.5</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">81.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
       
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -10.0    -17.5
@@ -3778,6 +3953,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">41.5</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">105.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Heel identical in both sources; Lean’s toe sits 6.5 mm further back.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -10.0    -17.5
@@ -3816,6 +3992,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">41.5</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">32.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Shapes agree across sources. Lean places the toe 6.5 mm and the heel 5 mm further back than Powderguide.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -10.0    -17.5
@@ -3853,6 +4030,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">41.5</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">46.0</td><td class="n">24.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
@@ -3892,6 +4070,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">31.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">80.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Heels agree. Lean’s toe sits 2 mm further back (19 ahead of / 12 behind the boot toe). Demo/Schizo adds a center hole 64 behind the boot toe.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -10.0    -18.0
@@ -3930,6 +4109,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">31.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">80.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Lean’s XCell heel sits 3 mm further back (20 wide 12 ahead of the heel, 40.5 wide 68 behind).</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -10.0    -18.0
@@ -3967,6 +4147,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">5</td><td class="n">75.0</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">92.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
@@ -4007,6 +4188,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">30.0</td><td class="n">42.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">75.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Powderguide and Lean agree.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -15.0    -20.0
@@ -4045,6 +4227,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">65.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">80.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Powderguide and SlideWright agree. The Lean library puts this heel 12 mm further forward (its STH2 front row); two templates outvote it.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -15.0    -20.0
@@ -4083,6 +4266,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">65.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">75.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Warden toe with the STH2 heel. Forum reports put the Strive 14 MN on this jig too; unverified.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -15.0    -20.0
@@ -4121,6 +4305,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">100.0</td><td class="n">36.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">65.0</td><td class="n">32.0</td><td></td></tr></tbody>
       </table></div>
       
+      <div class="shared"><span class="label">Same holes</span><ul><li>Same holes as <a href="#p-tyrolia-tour-demo">Tyrolia Tour Demo</a>: all 8 holes · Tyrolia Attack Hybrid boot 16.0 mm longer than Tyrolia Tour Demo · Tyrolia Attack Hybrid boot toe 16.0 mm ahead of the Tyrolia Tour Demo boot toe</li></ul></div>
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -33.0    -18.0
@@ -4159,6 +4344,7 @@ heel — from the back of boot heel
         <tbody><tr><td>toe</td><td>boot toe</td><td class="n">4</td><td class="n">55.0</td><td class="n">40.0</td><td></td></tr><tr><td>heel</td><td>back of boot heel</td><td class="n">4</td><td class="n">95.0</td><td class="n">42.5</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Powderguide and Lean agree; SlideWright’s heel sits 10 mm further forward, inside the ±15 adjustment.</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>toe — from the boot toe
    along    across
    -15.0    -20.0
@@ -4198,6 +4384,7 @@ heel — from the back of boot heel
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">354.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
       
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
   -178.0    -21.0
@@ -4233,6 +4420,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">335.0</td><td class="n">35.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
@@ -4270,6 +4458,7 @@ heel — from the back of boot heel
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">405.0</td><td class="n">36.0</td><td></td></tr></tbody>
       </table></div>
       
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
   -220.0    -18.0
@@ -4305,6 +4494,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">12</td><td class="n">361.0</td><td class="n">42.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
@@ -4346,6 +4536,7 @@ heel — from the back of boot heel
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">435.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">SlideWright’s layout drawing (labelled Strive 11 &amp; 13 Demo) and Lean agree on the hole spacing, but Lean puts the whole pattern 4 mm further toward the tail (toe 136/211, heel 144/224.5, 29.5 wide); SlideWright is used here. The heel rows are the regular Strive 12/14 heel footprint, where a regular Strive would sit for BSL 312 (SlideWright) or 320 (Lean).</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
   -220.0    -15.0
@@ -4382,6 +4573,7 @@ heel — from the back of boot heel
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">415.0</td><td class="n">42.5</td><td></td></tr></tbody>
       </table></div>
       <p class="fine">Powderguide, SlideWright and Lean agree; Lean rounds the rear heel pair to 43. The heel rows are the regular Attack heel footprint, where a regular Attack would sit for BSL 294 (Powderguide) or 314 (SlideWright).</p>
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
   -225.0    -21.2
@@ -4417,6 +4609,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">12</td><td class="n">356.0</td><td class="n">42.5</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
@@ -4458,6 +4651,7 @@ heel — from the back of boot heel
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">410.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
   -215.0    -12.5
@@ -4493,6 +4687,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">386.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
@@ -4530,6 +4725,7 @@ heel — from the back of boot heel
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">354.0</td><td class="n">25.0</td><td></td></tr></tbody>
       </table></div>
       
+      
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
   -187.0    -12.5
@@ -4565,6 +4761,7 @@ heel — from the back of boot heel
         <thead><tr><th>Part</th><th>Measured from</th><th>Holes</th><th>Along mm</th><th>Across mm</th><th>Notes</th></tr></thead>
         <tbody><tr><td>plate</td><td>mount line</td><td class="n">8</td><td class="n">400.0</td><td class="n">30.0</td><td></td></tr></tbody>
       </table></div>
+      
       
       <details><summary>Hole coordinates (mm, + toward the tip)</summary><pre>plate — from the mount line
    along    across
